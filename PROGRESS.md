@@ -5,7 +5,7 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
 
 ## Checkpoint status
 - [x] 0 Preflight
-- [x] 1 Booking backend, no voice (code + tests done; migration NOT applied yet, waiting for Hicham)
+- [x] 1 Booking backend, no voice (migration applied to Supabase project spjunmhdszvypquuhsxz)
 - [ ] 2 Deploy backend
 - [ ] 3 Retell LLM and agent
 - [ ] 4 Web demo page
@@ -27,7 +27,6 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
 
 ## Open questions for Hicham
 1. Allow `api.retellai.com` and `docs.retellai.com` in the cloud environment network settings.
-2. Supabase: new dedicated project (recommended) or a schema inside `digitalih-saas`?
 3. Retell API key (via environment secret, never pasted in chat).
 4. Browser SDK 3.x: live transcript needs the key in the browser on the new API; plan is the legacy
    `RetellWebClient.startCall` with our server token (decide at Checkpoint 4).
@@ -44,5 +43,7 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
 - Slots need 30 min lead time (`minLeadMinutes` in config). Advisor is assigned deterministically per slot.
 - Business errors (slot taken, invalid input) return HTTP 200 with a payload the LLM reads; only bad signatures
   get 401 and server faults 500.
-- Supabase: Hicham chose a dedicated DB; restoring the paused project `spjunmhdszvypquuhsxz` needs his explicit approval
-  (the permission system blocked it twice without it).
+- Supabase: Hicham approved restoring the paused project `spjunmhdszvypquuhsxz` (eu-west-2) and applying the migration
+  (migration name `atlas_voyages_init`). The project already held the schema of another app (actors/writers tables,
+  0 rows each); our 3 tables are additive, no name collisions. Security advisors: only INFO "RLS enabled, no policy"
+  on our tables (intended). Pre-existing warnings belong to the other app's functions and were left untouched.
