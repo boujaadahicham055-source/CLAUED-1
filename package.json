@@ -1,0 +1,40 @@
+{
+  "name": "atlas-voyages-voice-demo",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p .",
+    "local": "tsx scripts/local-server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boujaadahicham055-source/CLAUED-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boujaadahicham055-source/CLAUED-1/issues"
+  },
+  "homepage": "https://github.com/boujaadahicham055-source/CLAUED-1#readme",
+  "type": "module",
+  "private": "true",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "luxon": "^3.7.2",
+    "retell-sdk": "^6.1.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@types/luxon": "^3.7.6",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

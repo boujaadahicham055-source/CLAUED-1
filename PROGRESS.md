@@ -4,8 +4,8 @@ Project: Retell AI voice agent demo for a travel agency (fictional "Atlas Voyage
 Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md`.
 
 ## Checkpoint status
-- [x] 0 Preflight (waiting for Hicham's "go" and the missing items below)
-- [ ] 1 Booking backend, no voice
+- [x] 0 Preflight
+- [x] 1 Booking backend, no voice (code + tests done; migration NOT applied yet, waiting for Hicham)
 - [ ] 2 Deploy backend
 - [ ] 3 Retell LLM and agent
 - [ ] 4 Web demo page
@@ -31,3 +31,18 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
 3. Retell API key (via environment secret, never pasted in chat).
 4. Browser SDK 3.x: live transcript needs the key in the browser on the new API; plan is the legacy
    `RetellWebClient.startCall` with our server token (decide at Checkpoint 4).
+
+## Checkpoint 1 notes
+- Layout: `api/*.ts` are Vercel functions using Web `Request`/`Response` (`export async function POST`), so the raw body
+  is available for signature checks. Logic lives in `lib/availability.ts` (pure) and `lib/handlers.ts`.
+- Storage boundary `lib/db.ts` (`Db` interface). Production: Supabase service role. Tests and `scripts/local-server.ts`:
+  PGlite (in-process Postgres) running the real migration, so the unique-slot rule is tested on real Postgres.
+- Double booking: partial unique index on `appointments(slot_start) where status = 'booked'`. Mutation check done:
+  removing the index makes the race test fail.
+- Extra optional arg `preferred_time` ("HH:mm") on check_availability: returns the slots closest to that time.
+  Needed for scenario 3 (caller changes their mind about the time); without it the agent only hears 5 spread slots.
+- Slots need 30 min lead time (`minLeadMinutes` in config). Advisor is assigned deterministically per slot.
+- Business errors (slot taken, invalid input) return HTTP 200 with a payload the LLM reads; only bad signatures
+  get 401 and server faults 500.
+- Supabase: Hicham chose a dedicated DB; restoring the paused project `spjunmhdszvypquuhsxz` needs his explicit approval
+  (the permission system blocked it twice without it).

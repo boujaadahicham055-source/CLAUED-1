@@ -1,23 +1,108 @@
 [
-  {"id": "cp0-env", "description": "Preflight: tools inventory, .env.example, docs/retell-notes.md", "status": "passing"},
-  {"id": "avail-unit-tz", "description": "lib/availability: timezone edges (Africa/Casablanca, day boundaries)", "status": "not_started"},
-  {"id": "avail-unit-full", "description": "lib/availability: full day returns next 3 open days", "status": "not_started"},
-  {"id": "avail-unit-closed", "description": "lib/availability: Sunday / closed day never offered, next open days returned", "status": "not_started"},
-  {"id": "avail-unit-past", "description": "lib/availability: past slots and outside hours never offered", "status": "not_started"},
-  {"id": "book-race", "description": "Two bookings on the same slot: second gets error payload with 3 alternatives", "status": "not_started"},
-  {"id": "sig-valid", "description": "Endpoints accept a Retell-shaped request (name, call, args) with a valid signature", "status": "not_started"},
-  {"id": "sig-invalid", "description": "Endpoints reject unsigned or badly signed requests with 401", "status": "not_started"},
-  {"id": "deploy-public", "description": "Public HTTPS URL answers signed requests; booking row appears in Supabase; test rows deleted", "status": "not_started"},
-  {"id": "webhook-store", "description": "call_analyzed webhook stores summary in call_logs and lead in leads", "status": "not_started"},
-  {"id": "scenario-1-happy", "description": "Live: Marrakech, 3 travelers, mid December, medium budget, books first slot", "status": "not_started"},
-  {"id": "scenario-2-sunday", "description": "Live: caller picks a Sunday, agent proposes next open day", "status": "not_started"},
-  {"id": "scenario-3-change", "description": "Live: caller changes time after hearing slots, then confirms", "status": "not_started"},
-  {"id": "scenario-4-price", "description": "Live: Dubai package price asked, agent refuses to quote and still books", "status": "not_started"},
-  {"id": "scenario-5-phone", "description": "Live: unclear phone number read back and fixed before booking", "status": "not_started"},
-  {"id": "double-book-sessions", "description": "Two sessions book the same slot, second gets alternatives", "status": "not_started"},
-  {"id": "web-mic-denied", "description": "Web page shows clean error state when microphone permission is denied", "status": "not_started"},
-  {"id": "web-no-key-leak", "description": "Token request/response and bundle do not expose RETELL_API_KEY", "status": "not_started"},
-  {"id": "web-console-clean", "description": "No console errors; desktop and mobile screenshots OK", "status": "not_started"},
-  {"id": "rate-limit", "description": "/api/create-web-call is rate limited", "status": "not_started"},
-  {"id": "agent-limits", "description": "Agent has max_call_duration_ms and end_call_after_silence_ms", "status": "not_started"}
+  {
+    "id": "cp0-env",
+    "description": "Preflight: tools inventory, .env.example, docs/retell-notes.md",
+    "status": "passing"
+  },
+  {
+    "id": "avail-unit-tz",
+    "description": "lib/availability: timezone edges (Africa/Casablanca, day boundaries)",
+    "status": "passing"
+  },
+  {
+    "id": "avail-unit-full",
+    "description": "lib/availability: full day returns next 3 open days",
+    "status": "passing"
+  },
+  {
+    "id": "avail-unit-closed",
+    "description": "lib/availability: Sunday / closed day never offered, next open days returned",
+    "status": "passing"
+  },
+  {
+    "id": "avail-unit-past",
+    "description": "lib/availability: past slots and outside hours never offered",
+    "status": "passing"
+  },
+  {
+    "id": "book-race",
+    "description": "Two bookings on the same slot: second gets error payload with 3 alternatives",
+    "status": "passing"
+  },
+  {
+    "id": "sig-valid",
+    "description": "Endpoints accept a Retell-shaped request (name, call, args) with a valid signature",
+    "status": "passing"
+  },
+  {
+    "id": "sig-invalid",
+    "description": "Endpoints reject unsigned or badly signed requests with 401",
+    "status": "passing"
+  },
+  {
+    "id": "deploy-public",
+    "description": "Public HTTPS URL answers signed requests; booking row appears in Supabase; test rows deleted",
+    "status": "not_started"
+  },
+  {
+    "id": "webhook-store",
+    "description": "call_analyzed webhook stores summary in call_logs and lead in leads",
+    "status": "not_started",
+    "note": "Handler unit-tested locally (tests/handlers.test.ts); real Retell event pending Checkpoint 3."
+  },
+  {
+    "id": "scenario-1-happy",
+    "description": "Live: Marrakech, 3 travelers, mid December, medium budget, books first slot",
+    "status": "not_started"
+  },
+  {
+    "id": "scenario-2-sunday",
+    "description": "Live: caller picks a Sunday, agent proposes next open day",
+    "status": "not_started"
+  },
+  {
+    "id": "scenario-3-change",
+    "description": "Live: caller changes time after hearing slots, then confirms",
+    "status": "not_started"
+  },
+  {
+    "id": "scenario-4-price",
+    "description": "Live: Dubai package price asked, agent refuses to quote and still books",
+    "status": "not_started"
+  },
+  {
+    "id": "scenario-5-phone",
+    "description": "Live: unclear phone number read back and fixed before booking",
+    "status": "not_started"
+  },
+  {
+    "id": "double-book-sessions",
+    "description": "Two sessions book the same slot, second gets alternatives",
+    "status": "not_started"
+  },
+  {
+    "id": "web-mic-denied",
+    "description": "Web page shows clean error state when microphone permission is denied",
+    "status": "not_started"
+  },
+  {
+    "id": "web-no-key-leak",
+    "description": "Token request/response and bundle do not expose RETELL_API_KEY",
+    "status": "not_started"
+  },
+  {
+    "id": "web-console-clean",
+    "description": "No console errors; desktop and mobile screenshots OK",
+    "status": "not_started"
+  },
+  {
+    "id": "rate-limit",
+    "description": "/api/create-web-call is rate limited",
+    "status": "not_started"
+  },
+  {
+    "id": "agent-limits",
+    "description": "Agent has max_call_duration_ms and end_call_after_silence_ms",
+    "status": "not_started"
+  }
 ]
