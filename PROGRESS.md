@@ -69,9 +69,13 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
 - UNVERIFIED Retell behaviour: whether create-web-call uses the latest draft or the published agent version; the
   provisioning script publishes after each update to be safe.
 
+## Vercel project (created by Hicham)
+- Project `atlas-voyages-voice` (prj_mhEzXVRiUqK6ZTXF09rXqHBF1AEu), team DIGITALIH, production URL https://atlas-voyages-voice.vercel.app
+  (not atlas-voyages-demo). Git-connected to this repo; production branch set to `claude/charming-pascal-t6x26u`.
+
 ## Resume here (next session, after Hicham's manual steps)
 1. Check `RETELL_API_KEY` is set and `curl -s -o /dev/null -w "%{http_code}" https://api.retellai.com` is not 000.
-2. Confirm the Vercel deployment built: open https://atlas-voyages-demo.vercel.app (or the URL Hicham gives).
+2. Confirm the Vercel deployment built: open https://atlas-voyages-voice.vercel.app.
    Then re-run signed tests against it:
    `npx tsx scripts/send-signed.ts $APP_BASE_URL/api/check-availability '{"name":"check_availability","call":{"call_id":"deploy_test"},"args":{"date":"<a weekday>"}}'`
    plus `--unsigned` (expect 401), then one booking, check the row in Supabase, then delete the test rows
