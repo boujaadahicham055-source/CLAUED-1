@@ -69,3 +69,13 @@ system presets `{type:'system-presets', name:'call_summary'|'call_successful'|'u
 - `client.tests.createTestCaseDefinition({ name, response_engine, user_prompt, metrics, dynamic_variables, tool_mocks, llm_model })`
   and `client.tests.createBatchTest(...)` run simulated text conversations against a Retell LLM. Use for `scripts/simulate-calls.ts`.
 - Voices: `client.voice.list()` → `{ voice_id, voice_name, provider, gender, accent?, preview_audio_url? }`.
+
+## Agent versions
+- `client.agent.update(id, params)` edits the latest draft; `client.agent.publish(id, { version })` publishes it.
+- **(unverified)** which version `/v3/create-web-call` uses without `agent_version`. The provisioning script publishes
+  after each update so both answers give the new config.
+
+## Decision for the demo page
+- Server creates the call (`/api/create-web-call`), browser uses the legacy `RetellWebClient.startCall` with
+  `{ accessToken, callId, transport, iceServers }`. Keeps the key server side as required. Live transcript depends
+  on the gateway sending `update` events, to be confirmed on the first live call.

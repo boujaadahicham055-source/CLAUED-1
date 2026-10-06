@@ -42,7 +42,8 @@
   {
     "id": "deploy-public",
     "description": "Public HTTPS URL answers signed requests; booking row appears in Supabase; test rows deleted",
-    "status": "not_started"
+    "status": "failing",
+    "note": "Blocked: Vercel MCP token has no permission to create projects (403). Needs Hicham to import the repo in Vercel."
   },
   {
     "id": "webhook-store",
@@ -53,56 +54,85 @@
   {
     "id": "scenario-1-happy",
     "description": "Live: Marrakech, 3 travelers, mid December, medium budget, books first slot",
-    "status": "not_started"
+    "status": "not_started",
+    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
   },
   {
     "id": "scenario-2-sunday",
     "description": "Live: caller picks a Sunday, agent proposes next open day",
-    "status": "not_started"
+    "status": "not_started",
+    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
   },
   {
     "id": "scenario-3-change",
     "description": "Live: caller changes time after hearing slots, then confirms",
-    "status": "not_started"
+    "status": "not_started",
+    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
   },
   {
     "id": "scenario-4-price",
     "description": "Live: Dubai package price asked, agent refuses to quote and still books",
-    "status": "not_started"
+    "status": "not_started",
+    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
   },
   {
     "id": "scenario-5-phone",
     "description": "Live: unclear phone number read back and fixed before booking",
-    "status": "not_started"
+    "status": "not_started",
+    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
   },
   {
     "id": "double-book-sessions",
     "description": "Two sessions book the same slot, second gets alternatives",
-    "status": "not_started"
+    "status": "not_started",
+    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts. Backend side passing: tests/handlers.test.ts race test."
   },
   {
     "id": "web-mic-denied",
     "description": "Web page shows clean error state when microphone permission is denied",
-    "status": "not_started"
+    "status": "passing",
+    "note": "scripts/check-page.ts on local server: error copy shown, no token requested."
   },
   {
     "id": "web-no-key-leak",
     "description": "Token request/response and bundle do not expose RETELL_API_KEY",
-    "status": "not_started"
+    "status": "passing",
+    "note": "Local: sentinel key absent from all 8 responses (page, assets, token endpoint). Re-run on production."
   },
   {
     "id": "web-console-clean",
     "description": "No console errors; desktop and mobile screenshots OK",
-    "status": "not_started"
+    "status": "passing",
+    "note": "Local: no console errors desktop 1440x900 and mobile 390x844, no horizontal scroll; screenshots in docs/screenshots."
   },
   {
     "id": "rate-limit",
     "description": "/api/create-web-call is rate limited",
-    "status": "not_started"
+    "status": "passing",
+    "note": "tests/web-call.test.ts: per IP (4/10 min) and global (40/h) caps; Retell not called when blocked."
   },
   {
     "id": "agent-limits",
     "description": "Agent has max_call_duration_ms and end_call_after_silence_ms",
-    "status": "not_started"
+    "status": "passing",
+    "note": "tests/retell-config.test.ts: max_call_duration_ms 300000, end_call_after_silence_ms 30000. Applied to Retell at provisioning."
+  },
+  {
+    "id": "retell-config",
+    "description": "LLM tools: custom URLs, speak during/after, max_retry 0 booking / 1 availability, timeouts; agent webhook and analysis fields",
+    "status": "passing",
+    "note": "tests/retell-config.test.ts"
+  },
+  {
+    "id": "model-choice",
+    "description": "Compare at least two LLM models on tool reliability and latency, record choice",
+    "status": "not_started",
+    "note": "scripts/simulate-calls.ts --models ...; needs Retell access."
+  },
+  {
+    "id": "arabic-locale",
+    "description": "Test fr-FR + ar-SA with an Arabic speaking caller and report honestly",
+    "status": "not_started",
+    "note": "Needs a live call."
   }
 ]
