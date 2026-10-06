@@ -6,8 +6,8 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
 ## Checkpoint status
 - [x] 0 Preflight
 - [x] 1 Booking backend, no voice (migration applied to Supabase project spjunmhdszvypquuhsxz)
-- [ ] 2 Deploy backend: BLOCKED, Vercel MCP token cannot create projects (403). Code ready, `vercel.json` added.
-- [ ] 3 Retell LLM and agent: code ready (prompt, provisioning, simulation), NOT run: api.retellai.com blocked + no RETELL_API_KEY
+- [x] 2 Deploy backend: https://atlas-voyages-voice.vercel.app (Hicham imported the repo). Signed tests, real booking, double booking and cleanup verified.
+- [~] 3 Retell LLM and agent: provisioned (llm_c4c6469fc551a664284b0e56b28f, agent_e6ccedc1f641155f147b0c8088, voice cartesia-Emma, gpt-4.1). Simulation + live tests pending.
 - [~] 4 Web demo page: built and checked locally (11/11 browser checks); live call untested until deploy + agent
 - [~] 5 Hardening and handover: rate limit, call limits, README (FR), demo script done; cost per minute pending real calls
 
@@ -86,3 +86,18 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
 6. Try `--languages fr-FR,ar-SA` on a live call with an Arabic speaker; report honestly.
 7. `npx tsx scripts/check-page.ts $APP_BASE_URL --secret "$RETELL_API_KEY"` against production.
 8. Hicham runs the 5 live scenarios; record in tests/checklist.json; fill cost per minute in README.
+
+## Checkpoint 2 and 3 evidence (2026-10-06)
+- Node scripts need `NODE_USE_ENV_PROXY=1` in this container (Node fetch ignores HTTPS_PROXY otherwise and the proxy answers 403).
+- Production deploy from `claude/charming-pascal-t6x26u` built fine: the `.js` → `.ts` import worry did not happen.
+- Against production: unsigned 401, wrong-key signature 401, signed check_availability 200, booking 200 (row in Supabase,
+  14:30Z = 15:30 local, lead linked), same slot from a second call_id → slot_taken + 3 alternatives, no second row.
+  Test rows deleted (1 lead, 1 appointment).
+- `/api/create-web-call` answers 503 not_configured until Hicham adds RETELL_AGENT_ID on Vercel (MCP cannot write
+  env vars on this project: 404 project not found for the MCP token).
+- Retell versioning (verified): publishing an agent freezes that agent version AND its LLM version ("Cannot update
+  published LLM"). Updates go through `agent.createVersion({ base_version })` → edit the draft LLM version and agent
+  version → publish. `agent.publish` returns an empty body: read it with `.asResponse()`. Script fixed accordingly
+  and re-run: version 1 published.
+- French voices offered by Retell: cartesia-Emma (chosen by default), cartesia-Hailey-French, minimax-Camille
+  (female); cartesia-Pierre, minimax-Louis (male).

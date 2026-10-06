@@ -48,17 +48,36 @@ const languages = values.languages?.split(",").map((s) => s.trim());
 const prompt = readFileSync("prompts/agent-system-prompt.md", "utf8");
 const llmBody = llmParams({ cfg: agency, baseUrl, prompt, model });
 
-const llm = ids.llm_id ? await client.llm.update(ids.llm_id, llmBody) : await client.llm.create(llmBody);
-console.log(`${ids.llm_id ? "Updated" : "Created"} LLM ${llm.llm_id} (model ${model})`);
-
-const agentBody = agentParams({ cfg: agency, baseUrl, llmId: llm.llm_id, voiceId, languages });
-const agent = ids.agent_id ? await client.agent.update(ids.agent_id, agentBody) : await client.agent.create(agentBody);
-console.log(`${ids.agent_id ? "Updated" : "Created"} agent ${agent.agent_id} (version ${agent.version})`);
-
-if (!values["no-publish"] && !agent.is_published) {
-  await client.agent.publish(agent.agent_id, { version: agent.version });
-  console.log(`Published agent version ${agent.version}`);
+let llm: Retell.LlmResponse;
+let agent: Retell.AgentResponse;
+if (ids.llm_id && ids.agent_id) {
+  // A published version is frozen (agent and its LLM): open a new draft from it, edit the draft, publish below.
+  let draft = await client.agent.retrieve(ids.agent_id);
+  if (draft.is_published) {
+    draft = (await client.agent.createVersion(ids.agent_id, { base_version: draft.version })) as Retell.AgentResponse;
+  }
+  const engine = draft.response_engine as { llm_id: string; version?: number | null };
+  const llmVersion = engine.version ?? undefined;
+  llm = await client.llm.update(engine.llm_id, { ...llmBody, version: llmVersion });
+  console.log(`Updated LLM ${llm.llm_id} version ${llm.version} (model ${model})`);
+  const body = agentParams({ cfg: agency, baseUrl, llmId: llm.llm_id, voiceId, languages });
+  body.response_engine = { type: "retell-llm", llm_id: llm.llm_id, version: llm.version };
+  agent = await client.agent.update(ids.agent_id, { ...body, version: draft.version });
+  console.log(`Updated agent ${agent.agent_id} draft version ${agent.version}`);
+} else {
+  llm = await client.llm.create(llmBody);
+  console.log(`Created LLM ${llm.llm_id} (model ${model})`);
+  agent = await client.agent.create(agentParams({ cfg: agency, baseUrl, llmId: llm.llm_id, voiceId, languages }));
+  console.log(`Created agent ${agent.agent_id} (version ${agent.version})`);
 }
 
+// Save ids first, so a failure below never leads to duplicate resources on the next run.
 writeFileSync(IDS_FILE, JSON.stringify({ llm_id: llm.llm_id, agent_id: agent.agent_id, voice_id: voiceId, model }, null, 2) + "\n");
 console.log(`Saved ids to ${IDS_FILE}. Set RETELL_AGENT_ID=${agent.agent_id} on Vercel.`);
+
+if (!values["no-publish"] && !agent.is_published) {
+  // The publish endpoint answers with an empty body, which the SDK's JSON parser rejects: read the raw response.
+  const res = await client.agent.publish(agent.agent_id, { version: agent.version }).asResponse();
+  if (!res.ok) throw new Error(`publish failed: HTTP ${res.status}`);
+  console.log(`Published agent version ${agent.version}`);
+}

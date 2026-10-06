@@ -4,8 +4,8 @@
 //
 //   RETELL_API_KEY=... npx tsx scripts/simulate-calls.ts [--models gpt-4.1,gemini-3.5-flash]
 //
-// Needs .retell-ids.json from scripts/provision-retell.ts. With --models, the LLM model is
-// switched for each run and restored to the original model at the end.
+// Needs .retell-ids.json from scripts/provision-retell.ts. With --models, each model runs on a temporary
+// draft agent version (published versions are frozen), deleted at the end; the live agent is never touched.
 
 import { readFileSync } from "node:fs";
 import { setTimeout as sleep } from "node:timers/promises";
@@ -18,7 +18,7 @@ import { dynamicVariables, type LlmModel } from "../lib/retell-config.js";
 
 const { values } = parseArgs({ options: { models: { type: "string" } } });
 const client = new Retell({ apiKey: process.env.RETELL_API_KEY });
-const ids = JSON.parse(readFileSync(".retell-ids.json", "utf8")) as { llm_id: string; model: string };
+const ids = JSON.parse(readFileSync(".retell-ids.json", "utf8")) as { llm_id: string; agent_id: string; model: string };
 
 const now = new Date();
 const today = DateTime.fromJSDate(now, { zone: agency.timezone }).startOf("day");
@@ -109,12 +109,12 @@ const scenarios = [
   },
 ];
 
-async function runBatch(label: string) {
+async function runBatch(label: string, llmVersion?: number) {
   const definitionIds: string[] = [];
   for (const s of scenarios) {
     const def = await client.tests.createTestCaseDefinition({
       name: `atlas-${label}-${s.name}`,
-      response_engine: { type: "retell-llm", llm_id: ids.llm_id },
+      response_engine: { type: "retell-llm", llm_id: ids.llm_id, version: llmVersion },
       user_prompt: s.user_prompt,
       metrics: s.metrics,
       dynamic_variables: dynamicVariables(agency),
@@ -124,7 +124,7 @@ async function runBatch(label: string) {
   }
   const started = Date.now();
   let batch = await client.tests.createBatchTest({
-    response_engine: { type: "retell-llm", llm_id: ids.llm_id },
+    response_engine: { type: "retell-llm", llm_id: ids.llm_id, version: llmVersion },
     test_case_definition_ids: definitionIds,
   });
   while (batch.status !== "complete") {
@@ -144,13 +144,16 @@ const models = values.models?.split(",").map((m) => m.trim() as LlmModel);
 if (!models) {
   await runBatch(ids.model);
 } else {
+  const live = await client.agent.retrieve(ids.agent_id);
+  const draft = (await client.agent.createVersion(ids.agent_id, { base_version: live.version })) as Retell.AgentResponse;
+  const llmVersion = (draft.response_engine as { version?: number | null }).version ?? undefined;
   try {
     for (const model of models) {
-      await client.llm.update(ids.llm_id, { model });
-      await runBatch(model);
+      await client.llm.update(ids.llm_id, { model, version: llmVersion });
+      await runBatch(model, llmVersion);
     }
   } finally {
-    await client.llm.update(ids.llm_id, { model: ids.model as LlmModel });
-    console.log(`\nRestored LLM model to ${ids.model}`);
+    await client.agent.deleteVersion(ids.agent_id, { version: draft.version }).asResponse();
+    console.log(`\nDeleted temporary draft agent version ${draft.version}; live agent untouched.`);
   }
 }
