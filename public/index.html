@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Atlas Voyages · Assistante vocale</title>
+  <meta name="description" content="Parlez à Salma, l'assistante vocale d'Atlas Voyages : elle comprend votre projet de voyage et vous réserve un rendez-vous avec un conseiller.">
+  <meta name="theme-color" content="#0b1a1f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e8b35a' d='M16 .5l4.5 4.5H27v6.5l4.5 4.5L27 20.5V27h-6.5L16 31.5 11.5 27H5v-6.5L.5 16 5 11.5V5h6.5z'/%3E%3C/svg%3E">
+  <link rel="preload" href="/fonts/gloock-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body data-state="idle">
+  <div class="sky" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="horizon"></div>
+    <svg class="ridge ridge-far" viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 230 L120 170 L210 205 L330 120 L450 190 L560 140 L700 210 L820 110 L940 180 L1060 130 L1180 200 L1300 150 L1440 190 L1440 320 L0 320 Z"/></svg>
+    <svg class="ridge ridge-mid" viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 260 L150 200 L260 240 L400 170 L520 235 L660 185 L780 250 L900 175 L1040 240 L1170 190 L1300 245 L1440 210 L1440 320 L0 320 Z"/></svg>
+    <svg class="ridge ridge-near" viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 290 L180 245 L330 280 L480 235 L640 285 L800 250 L960 290 L1120 245 L1290 285 L1440 255 L1440 320 L0 320 Z"/></svg>
+  </div>
+
+  <main class="page">
+    <header class="brand reveal" style="--d: 0">
+      <svg class="brand-star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .5l4.5 4.5H27v6.5l4.5 4.5L27 20.5V27h-6.5L16 31.5 11.5 27H5v-6.5L.5 16 5 11.5V5h6.5z"/></svg>
+      <span class="brand-name">Atlas Voyages</span>
+      <span class="brand-city">Casablanca</span>
+    </header>
+
+    <section class="hero">
+      <h1 class="reveal" style="--d: 1">Votre prochain voyage commence par une conversation.</h1>
+      <p class="lede reveal" style="--d: 2">Salma, l'assistante de l'agence, écoute votre projet et vous réserve un rendez-vous avec un conseiller. Moins de trois minutes, en français.</p>
+    </section>
+
+    <section class="call" aria-label="Appel avec l'assistante">
+      <button id="orb" class="orb reveal" style="--d: 3" type="button" aria-describedby="status hint">
+        <svg class="orb-rings" viewBox="0 0 200 200" aria-hidden="true">
+          <circle class="ring ring-outer" cx="100" cy="100" r="96"/>
+          <circle class="ring ring-mid" cx="100" cy="100" r="80"/>
+          <circle class="ring ring-inner" cx="100" cy="100" r="64"/>
+          <path class="orb-star" d="M100 64l10.5 10.5h15v15L136 100l-10.5 10.5v15h-15L100 136l-10.5-10.5h-15v-15L64 100l10.5-10.5v-15h15z"/>
+        </svg>
+        <span class="orb-label" id="orb-label">Parler à l'assistant</span>
+      </button>
+
+      <div class="status-block reveal" style="--d: 4">
+        <p id="status" class="status" role="status" aria-live="polite">Prête à vous écouter</p>
+        <p id="hint" class="hint">Appuyez, autorisez le micro, et parlez naturellement.</p>
+        <p id="timer" class="timer" hidden>0:00</p>
+      </div>
+
+      <div class="controls" id="controls" hidden>
+        <button id="mute" class="control" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="mic-on" d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-2.1a7 7 0 0 0 6-6.9h-2Z"/><path class="mic-off" d="M3.3 2 2 3.3l6 6V12a4 4 0 0 0 5.6 3.7l1.5 1.5A6 6 0 0 1 7 12H5a8 8 0 0 0 6 7.7V22h2v-2.3a8 8 0 0 0 3.6-1.2l4.1 4.1 1.3-1.3Zm12.7 9.7V6a4 4 0 0 0-7.6-1.7Zm3 .3h-2a6 6 0 0 1-.5 2.3l1.5 1.5A8 8 0 0 0 19 12Z"/></svg>
+          <span class="control-label">Couper le micro</span>
+        </button>
+        <button id="hangup" class="control control-end" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9c-2.6 0-5 .5-7.3 1.4-.7.3-1.1 1-1 1.8l.3 2c.1.8.9 1.3 1.7 1.1l3-.8c.6-.2 1-.7 1-1.4v-1.6c1.5-.4 3.1-.4 4.6 0v1.6c0 .7.4 1.2 1 1.4l3 .8c.8.2 1.6-.3 1.7-1.1l.3-2c.1-.8-.3-1.5-1-1.8C17 9.5 14.6 9 12 9Z"/></svg>
+          <span class="control-label">Raccrocher</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="transcript" id="transcript" aria-label="Transcription en direct" hidden>
+      <h2 class="transcript-title">La conversation</h2>
+      <ol id="transcript-list" class="transcript-list"></ol>
+    </section>
+
+    <footer class="foot reveal" style="--d: 5">
+      <p>Du lundi au samedi, de 9 h 30 à 18 h. Les appels de démonstration sont enregistrés pour le suivi du conseiller.</p>
+    </footer>
+  </main>
+</body>
+</html>

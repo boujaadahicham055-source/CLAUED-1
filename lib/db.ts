@@ -53,6 +53,8 @@ export interface Db {
   insertAppointment(a: NewAppointment): Promise<InsertResult>;
   upsertLead(l: LeadFields): Promise<void>;
   upsertCallLog(c: CallLogFields): Promise<void>;
+  /** Records a web call request and returns how many happened since each timestamp. */
+  recordWebCallRequest(ipHash: string, ipSinceIso: string, globalSinceIso: string): Promise<{ ip: number; global: number }>;
 }
 
 const LEAD_COLUMNS: Record<Exclude<keyof LeadFields, "callId">, string> = {
@@ -143,6 +145,21 @@ export function supabaseDb(client: SupabaseClient): Db {
       const row = { ...callLogRow(c), updated_at: new Date().toISOString() };
       const { error } = await client.from("call_logs").upsert(row, { onConflict: "call_id" });
       if (error) throw new Error(`upsertCallLog: ${error.message}`);
+    },
+
+    async recordWebCallRequest(ipHash, ipSinceIso, globalSinceIso) {
+      const insert = await client.from("web_call_requests").insert({ ip_hash: ipHash });
+      if (insert.error) throw new Error(`recordWebCallRequest: ${insert.error.message}`);
+      const [ip, global] = await Promise.all([
+        client
+          .from("web_call_requests")
+          .select("id", { count: "exact", head: true })
+          .eq("ip_hash", ipHash)
+          .gte("created_at", ipSinceIso),
+        client.from("web_call_requests").select("id", { count: "exact", head: true }).gte("created_at", globalSinceIso),
+      ]);
+      if (ip.error || global.error) throw new Error(`recordWebCallRequest: ${(ip.error ?? global.error)!.message}`);
+      return { ip: ip.count ?? 0, global: global.count ?? 0 };
     },
   };
 }

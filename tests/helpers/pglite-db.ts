@@ -60,6 +60,17 @@ export async function createPgliteDb(): Promise<{ db: Db; pg: PGlite }> {
     async upsertCallLog(c) {
       await upsert("call_logs", callLogRow(c), "call_id");
     },
+
+    async recordWebCallRequest(ipHash, ipSinceIso, globalSinceIso) {
+      await pg.query("insert into web_call_requests (ip_hash) values ($1)", [ipHash]);
+      const r = await pg.query<{ ip: number; global: number }>(
+        `select count(*) filter (where ip_hash = $1 and created_at >= $2)::int as ip,
+                count(*) filter (where created_at >= $3)::int as global
+         from web_call_requests`,
+        [ipHash, ipSinceIso, globalSinceIso],
+      );
+      return r.rows[0];
+    },
   };
 
   return { db, pg };
