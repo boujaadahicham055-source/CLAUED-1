@@ -74,8 +74,9 @@ export function llmParams(opts: {
         url: `${baseUrl}/api/book-appointment`,
         method: "POST",
         description:
-          "Réserve un créneau avec un conseiller. À appeler une seule fois, uniquement après confirmation orale " +
-          "explicite du créneau, du nom et du numéro. Si le créneau vient d'être pris, renvoie des alternatives.",
+          "Réserve un créneau avec un conseiller. À appeler une seule fois, uniquement après avoir relu le numéro " +
+          "à voix haute et obtenu un oui explicite sur le créneau, le nom et le numéro. Si le créneau vient d'être pris, " +
+          "renvoie des alternatives.",
         parameters: {
           type: "object",
           properties: {
