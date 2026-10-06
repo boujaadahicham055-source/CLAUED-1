@@ -117,8 +117,16 @@ async function run(browser: Browser, denyingBrowser: Browser) {
   }
 }
 
-const browser = await chromium.launch({ executablePath, args: ["--use-fake-device-for-media-stream"] });
-const denyingBrowser = await chromium.launch({ executablePath, args: ["--use-fake-device-for-media-stream", "--deny-permission-prompts"] });
+// Behind an egress proxy (cloud sessions), route the browser through it too.
+const proxy = process.env.HTTPS_PROXY && !base.includes("localhost") ? { server: process.env.HTTPS_PROXY } : undefined;
+// Extra Chromium flags for unusual environments (e.g. a container whose NSS store has no root CAs).
+const extra = process.env.CHROMIUM_EXTRA_ARGS?.split(" ").filter(Boolean) ?? [];
+const browser = await chromium.launch({ executablePath, proxy, args: ["--use-fake-device-for-media-stream", ...extra] });
+const denyingBrowser = await chromium.launch({
+  executablePath,
+  proxy,
+  args: ["--use-fake-device-for-media-stream", "--deny-permission-prompts", ...extra],
+});
 try {
   await run(browser, denyingBrowser);
 } finally {

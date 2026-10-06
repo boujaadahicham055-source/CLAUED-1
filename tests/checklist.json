@@ -42,8 +42,8 @@
   {
     "id": "deploy-public",
     "description": "Public HTTPS URL answers signed requests; booking row appears in Supabase; test rows deleted",
-    "status": "failing",
-    "note": "Blocked: Vercel MCP token has no permission to create projects (403). Needs Hicham to import the repo in Vercel."
+    "status": "passing",
+    "note": "https://atlas-voyages-voice.vercel.app: unsigned/bad signature 401, signed 200, real booking row, second call_id got slot_taken + 3 alternatives, test rows deleted."
   },
   {
     "id": "webhook-store",
@@ -55,31 +55,31 @@
     "id": "scenario-1-happy",
     "description": "Live: Marrakech, 3 travelers, mid December, medium budget, books first slot",
     "status": "not_started",
-    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
+    "note": "Simulated: passing on gemini-3.5-flash (run 2). Live test by Hicham pending."
   },
   {
     "id": "scenario-2-sunday",
     "description": "Live: caller picks a Sunday, agent proposes next open day",
     "status": "not_started",
-    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
+    "note": "Simulated: passing on gemini-3.5-flash (run 2). Live test by Hicham pending."
   },
   {
     "id": "scenario-3-change",
     "description": "Live: caller changes time after hearing slots, then confirms",
     "status": "not_started",
-    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
+    "note": "Simulated: passing on gemini-3.5-flash (run 2). Live test by Hicham pending."
   },
   {
     "id": "scenario-4-price",
     "description": "Live: Dubai package price asked, agent refuses to quote and still books",
     "status": "not_started",
-    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
+    "note": "Simulated: passing on gemini-3.5-flash (run 2). Live test by Hicham pending."
   },
   {
     "id": "scenario-5-phone",
     "description": "Live: unclear phone number read back and fixed before booking",
     "status": "not_started",
-    "note": "Blocked until agent is provisioned (api.retellai.com blocked, no RETELL_API_KEY). Scripted in scripts/simulate-calls.ts."
+    "note": "Simulated: passing on gemini-3.5-flash (run 2). Live test by Hicham pending."
   },
   {
     "id": "double-book-sessions",
@@ -97,7 +97,7 @@
     "id": "web-no-key-leak",
     "description": "Token request/response and bundle do not expose RETELL_API_KEY",
     "status": "passing",
-    "note": "Local: sentinel key absent from all 8 responses (page, assets, token endpoint). Re-run on production."
+    "note": "Local browser scan (8 responses) + production token endpoint via curl: key absent."
   },
   {
     "id": "web-console-clean",
@@ -126,8 +126,8 @@
   {
     "id": "model-choice",
     "description": "Compare at least two LLM models on tool reliability and latency, record choice",
-    "status": "not_started",
-    "note": "scripts/simulate-calls.ts --models ...; needs Retell access."
+    "status": "passing",
+    "note": "gemini-3.5-flash chosen: 11/12 simulated scenarios over 2 runs vs 10/12 for gpt-4.1, faster. See PROGRESS.md. Live latency to confirm."
   },
   {
     "id": "arabic-locale",

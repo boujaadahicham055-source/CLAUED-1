@@ -6,8 +6,8 @@ import type { AgencyConfig } from "../config/agency.js";
 
 export type LlmModel = NonNullable<Retell.LlmCreateParams["model"]>;
 
-// Chosen at Checkpoint 3 by scripts/simulate-calls.ts; override with RETELL_LLM_MODEL.
-export const DEFAULT_MODEL: LlmModel = "gpt-4.1";
+// Chosen at Checkpoint 3 by scripts/simulate-calls.ts (see PROGRESS.md); override with RETELL_LLM_MODEL.
+export const DEFAULT_MODEL: LlmModel = "gemini-3.5-flash";
 
 export function dynamicVariables(cfg: AgencyConfig): Record<string, string> {
   return {

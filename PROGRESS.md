@@ -7,7 +7,7 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
 - [x] 0 Preflight
 - [x] 1 Booking backend, no voice (migration applied to Supabase project spjunmhdszvypquuhsxz)
 - [x] 2 Deploy backend: https://atlas-voyages-voice.vercel.app (Hicham imported the repo). Signed tests, real booking, double booking and cleanup verified.
-- [~] 3 Retell LLM and agent: provisioned (llm_c4c6469fc551a664284b0e56b28f, agent_e6ccedc1f641155f147b0c8088, voice cartesia-Emma, gpt-4.1). Simulation + live tests pending.
+- [~] 3 Retell LLM and agent: provisioned (llm_c4c6469fc551a664284b0e56b28f, agent_e6ccedc1f641155f147b0c8088, voice cartesia-Emma, model gemini-3.5-flash, published v5). Simulations done; live tests pending.
 - [~] 4 Web demo page: built and checked locally (11/11 browser checks); live call untested until deploy + agent
 - [~] 5 Hardening and handover: rate limit, call limits, README (FR), demo script done; cost per minute pending real calls
 
@@ -101,3 +101,17 @@ Resume from: this file, `tests/checklist.json`, `git log`, `docs/retell-notes.md
   and re-run: version 1 published.
 - French voices offered by Retell: cartesia-Emma (chosen by default), cartesia-Hailey-French, minimax-Camille
   (female); cartesia-Pierre, minimax-Louis (male).
+
+## Model choice (Checkpoint 3)
+Simulated with Retell's test API (scripts/simulate-calls.ts, 6 scenarios, tools mocked by our real availability logic,
+LLM-judged metrics). Each model ran on a temporary draft version, deleted afterwards.
+| Run | gpt-4.1 | gemini-3.5-flash |
+|---|---|---|
+| 1 (initial prompt) | 5/6, 74 s. FAIL happy path: booked BEFORE reading the phone back | 5/6, 57 s. FAIL change-time: offered 15:30 from earlier results instead of re-checking |
+| 2 (read-back made a hard gate in prompt + tool description) | 5/6, 84 s. FAIL change-time: booked 15:30 without re-checking | 6/6, 56 s |
+Choice: gemini-3.5-flash (11/12 over both runs vs 10/12, and about 30 % faster per batch, a rough proxy for turn latency).
+To confirm on live calls: perceived latency and French quality. Revert with `--model gpt-4.1`.
+The change-time metric is the flaky one on both models; neither model invented a time (both used real returned slots).
+- Production browser check from this container is not possible: Chromium here has an empty NSS store and rejects
+  the real Google Trust Services chain (curl verifies it fine). Same files were checked locally (11/11). Token
+  endpoint verified on production with curl: 200, only call_id/access_token/expires_at/transport/ice_servers, no key.
