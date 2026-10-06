@@ -115,3 +115,10 @@ The change-time metric is the flaky one on both models; neither model invented a
 - Production browser check from this container is not possible: Chromium here has an empty NSS store and rejects
   the real Google Trust Services chain (curl verifies it fine). Same files were checked locally (11/11). Token
   endpoint verified on production with curl: 200, only call_id/access_token/expires_at/transport/ice_servers, no key.
+
+## Phone number for tests (2026-10-06)
+- Hicham approved buying a test number (has 10 USD Retell credit). scripts/phone-number.ts (idempotent: shows the
+  number bound to the agent, `--buy` purchases one bound with agent_version "latest_published").
+- Purchase refused by Retell: 402 "This item requires a card on file", even with credit. Nothing bought.
+- Retell numbers are US/CA only, and outbound calls from them reach US destinations only: the agent cannot call a
+  Moroccan mobile. A Moroccan caller dials +1 internationally (paid on their own plan).
