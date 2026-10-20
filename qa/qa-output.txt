@@ -1,0 +1,46 @@
+== Streams
+[PASS] exactly one video + one audio stream: 1 video, 1 audio
+[PASS] video codec H.264: h264 (High, yuv420p)
+[PASS] pixel format yuv420p, BT.709 limited range: yuv420p, range tv, matrix bt709, transfer bt709, primaries bt709
+[PASS] resolution 1080x1920 (9:16): 1080x1920
+[PASS] frame rate 30 fps: r=30/1 avg=30/1
+[PASS] audio codec AAC: aac 48000 Hz, 2 ch, 189 kb/s
+[PASS] duration = narration + short CTA tail: 41.685 s (voice-over 40.438 s, tail 1.25 s); 1250 frames
+       file size 31.5 MB, video 5.8 Mb/s
+== Audio: voice-over identity
+[PASS] voice-over aligned at t=0: offset +0.0 ms, normalised correlation 0.9999
+[PASS] voice-over unaltered (no pitch/speed change, no added layer): gain 0.997, residual SNR 38.0 dB (AAC coding noise only)
+[PASS] voice-over plays start to end: 80 half-second windows compared; dropouts: none
+[PASS] CTA tail is silent (no extra audio): -180.0 dBFS after 40.44 s
+== Audio: original source soundtrack absent
+       source soundtrack RMS -13.7 dBFS over 14.9 s (what would leak)
+[PASS] leak detector self-test (source mixed in at -20 dB is caught): NCC 1.000
+[PASS] no trace of the source soundtrack in the output: max NCC of 28 source chunks vs. residual = 0.176 (threshold 0.25)
+[PASS] footage master has no audio stream: public/assets/footage_1080p60.webm: no audio stream
+== Picture
+[PASS] no black frames / gaps: none (blackdetect d>=0.05 s, pix_th 0.06)
+       freezedetect (n=0.0008, d>=0.5 s): none
+       detected cuts (15): 3.83 6.47 17.13 19.00 21.87 22.63 23.20 24.03 24.60 28.20 30.67 31.87 33.47 35.03 37.53
+[PASS] every picture change sits on a designed edit point: 17 changes (scene > 0.15) vs 22 edit points; unexpected: none
+== Sync measured from the rendered pixels
+         2.34s معطّل: half-visible at frame 71 (+33 ms vs spoken onset)
+         5.70s والو!: half-visible at frame 172 (+33 ms vs spoken onset)
+         6.88s ما بغاتش: half-visible at frame 207 (+33 ms vs spoken onset)
+         7.34s تشعل: half-visible at frame 221 (+33 ms vs spoken onset)
+        16.46s الحل: half-visible at frame 494 (+0 ms vs spoken onset)
+        18.26s صغير...: grouped with another accent animation within 8 frames — not measured alone
+        19.80s 4: half-visible at frame 594 (+0 ms vs spoken onset)
+        21.88s بوستر: grouped with another accent animation within 8 frames — not measured alone
+        23.20s منفاخ: grouped with another accent animation within 8 frames — not measured alone
+        24.60s باور بانك: grouped with another accent animation within 8 frames — not measured alone
+        26.26s ضو: grouped with another accent animation within 8 frames — not measured alone
+        26.42s LED: grouped with another accent animation within 8 frames — not measured alone
+        28.96s 4: half-visible at frame 869 (+0 ms vs spoken onset)
+        30.66s عملي: half-visible at frame 921 (+33 ms vs spoken onset)
+        34.95s strike مشكل فالبطارية: no measurable accent change (overlaps another accent element)
+        36.00s strike العجلة مفشوشة: no measurable accent change (overlaps another accent element)
+        37.53s طلبو: grouped with another accent animation within 8 frames — not measured alone
+        37.74s دابا: grouped with another accent animation within 8 frames — not measured alone
+[PASS] accent words appear with their spoken words: 8 measured, offsets 0..1 frames (30 fps)
+       contact sheet: qa/contact-sheet.png
+== Result: ALL HARD CHECKS PASSED

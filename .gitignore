@@ -1,0 +1,4 @@
+node_modules/
+# QA scratch renders (tools/stills.mjs, tools/probe.mjs, render logs)
+out/
+.DS_Store

@@ -1,0 +1,27 @@
+{
+  "name": "machri-ad",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MACHRI 4-in-1 jump starter — Moroccan Darija vertical ad (Remotion)",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render ProductAd MACHRI_AD_FINAL.mp4",
+    "still": "remotion still ProductAd",
+    "typecheck": "tsc --noEmit"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@remotion/cli": "4.0.537",
+    "@remotion/fonts": "4.0.537",
+    "@remotion/layout-utils": "4.0.537",
+    "@remotion/media": "4.0.537",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.537"
+  },
+  "devDependencies": {
+    "@fontsource/cairo": "5.2.6",
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}
