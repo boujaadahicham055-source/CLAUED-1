@@ -1,0 +1,318 @@
+{
+  "source": {
+    "original_upload_name": "998d899c-______________________________________5____1_Portable_Car_Battery_Jump_Starter_with_Air_Compressor_1000A_150PSI_Peak_Jump_Starter_Battery_Pack_12V_Jumper_Starter_Box____________________.mp4",
+    "note": "The Arabic part of the filename arrived replaced by underscores; it is the \"... 5 في 1 Portable Car Battery Jump Starter ...\" clip. Saved in the project as public/media/source_product.mp4 (byte-identical, md5 08e7cb0a37b4e98d55a1afe142ec11fe).",
+    "resolution": "576x768 (3:4)",
+    "fps": 25,
+    "duration_s": 38.68,
+    "video": "H.264, ~316 kb/s",
+    "audio": "AAC stereo 44.1 kHz — fully removed from the edit (proxy encoded with -an, every <OffthreadVideo> muted)",
+    "embedded_graphics": "Three black title cards (Jump Starters / Tire Inflator / Charger) and burned-in English captions in the lower band (rows ~600-700, incl. typo \"pvositive termiv\"). Embossed manufacturer badge on the device body.",
+    "scene_cuts_s": [
+      1.04,
+      3.24,
+      5.4,
+      7.88,
+      10.08,
+      12.4,
+      13.36,
+      16.24,
+      18.92,
+      21.52,
+      22.72,
+      28.2,
+      29.04,
+      32.96
+    ]
+  },
+  "shots": [
+    {
+      "id": "SRC01",
+      "source_start_s": 0,
+      "source_end_s": 1.04,
+      "visual_description": "Black title card \"Jump Starters\".",
+      "product_function": "none",
+      "burned_in_captions": "title card",
+      "clean_rows": null,
+      "quality": "reject",
+      "usefulness": "Graphic card, no product.",
+      "suggested_destination": [],
+      "used_in_edit": []
+    },
+    {
+      "id": "SRC02",
+      "source_start_s": 1.04,
+      "source_end_s": 3.24,
+      "visual_description": "Device close-up on dark car interior; jumper-lead plug pushed into the device (1.0-1.8 s); orange and black clamps hang beside it; display reads 0.0.",
+      "product_function": "Battery booster (jump starter)",
+      "burned_in_captions": "\"Connect\" (rows ~615-650)",
+      "clean_rows": "0-600",
+      "quality": "high",
+      "usefulness": "Best shot of the device as a jump-starter kit.",
+      "suggested_destination": [
+        "S06",
+        "S12"
+      ],
+      "used_in_edit": [
+        "S06/sh06a @1.12s",
+        "S12/sh12a @1.75s"
+      ]
+    },
+    {
+      "id": "SRC03",
+      "source_start_s": 3.24,
+      "source_end_s": 5.4,
+      "visual_description": "Engine bay, battery + terminal. Clean 3.24-3.55; red clamp brought in from 3.6 and clamped on the terminal 4.0-5.4.",
+      "product_function": "Battery booster (jump starter)",
+      "burned_in_captions": "\"Connect\" / \"Red clamp to the pvositive termiv +\" (typo, 2 lines)",
+      "clean_rows": "0-592",
+      "quality": "high",
+      "usefulness": "Clear, readable jump-start demonstration.",
+      "suggested_destination": [
+        "S06",
+        "S10"
+      ],
+      "used_in_edit": [
+        "S06/sh06b @3.72s",
+        "S10/tile1 @4s"
+      ]
+    },
+    {
+      "id": "SRC04",
+      "source_start_s": 5.4,
+      "source_end_s": 7.88,
+      "visual_description": "Battery close-up with label; a hand places the black clamp on the - terminal (5.6-7.3), then leaves.",
+      "product_function": "Battery (problem context)",
+      "burned_in_captions": "\"Black clamp to the negative terminal -\" (2 lines)",
+      "clean_rows": "0-592",
+      "quality": "medium",
+      "usefulness": "Only real battery close-up; used for \"old battery\" + \"cold\".",
+      "suggested_destination": [
+        "S03"
+      ],
+      "used_in_edit": [
+        "S03/sh03 @5.42s (0.695x)"
+      ]
+    },
+    {
+      "id": "SRC05",
+      "source_start_s": 7.88,
+      "source_end_s": 10.08,
+      "visual_description": "Car interior, start/stop button. Finger enters 8.2, presses 8.6-9.5; dashboard lights up from ~9.6 (car starts).",
+      "product_function": "Problem: trying to start the car",
+      "burned_in_captions": "\"Start\"",
+      "clean_rows": "0-615",
+      "quality": "high",
+      "usefulness": "Strong hook/problem visual. Must be cut before 9.6 s so the car is not shown starting during the \"won't start\" line.",
+      "suggested_destination": [
+        "S01",
+        "S02"
+      ],
+      "used_in_edit": [
+        "S01/sh01 @7.96s (freeze)",
+        "S02/sh02 @8.12s",
+        "S02/sh02f @8.933s (freeze)"
+      ]
+    },
+    {
+      "id": "SRC06",
+      "source_start_s": 10.08,
+      "source_end_s": 12.4,
+      "visual_description": "Static wide shot of an open bonnet / engine bay; small red clamps visible on the battery.",
+      "product_function": "Problem context (car with bonnet open)",
+      "burned_in_captions": "\"Remove\" from ~10.5",
+      "clean_rows": "0-610",
+      "quality": "medium",
+      "usefulness": "Rejected for the hook: the red clamps and the jump starter itself are visible on the engine, which would reveal the solution before the problem.",
+      "suggested_destination": [],
+      "used_in_edit": []
+    },
+    {
+      "id": "SRC07",
+      "source_start_s": 12.4,
+      "source_end_s": 13.36,
+      "visual_description": "Black title card \"Tire Inflator\".",
+      "product_function": "none",
+      "burned_in_captions": "title card",
+      "clean_rows": null,
+      "quality": "reject",
+      "usefulness": "Graphic card, no product.",
+      "suggested_destination": [],
+      "used_in_edit": []
+    },
+    {
+      "id": "SRC08",
+      "source_start_s": 13.36,
+      "source_end_s": 16.24,
+      "visual_description": "Outdoors on asphalt: hands hold the device and attach the orange hose coupler.",
+      "product_function": "Tyre inflator (set-up) / portability",
+      "burned_in_captions": null,
+      "clean_rows": "0-768",
+      "quality": "high",
+      "usefulness": "Device in hand with hose.",
+      "suggested_destination": [
+        "S07"
+      ],
+      "used_in_edit": [
+        "S07/sh07a @14.95s"
+      ]
+    },
+    {
+      "id": "SRC09",
+      "source_start_s": 16.24,
+      "source_end_s": 18.92,
+      "visual_description": "Tyre valve close-up; hand screws the hose onto the valve (16.9-18.4).",
+      "product_function": "Tyre inflator",
+      "burned_in_captions": null,
+      "clean_rows": "0-768",
+      "quality": "high",
+      "usefulness": "Clearest tyre-inflation action.",
+      "suggested_destination": [
+        "S07",
+        "S10"
+      ],
+      "used_in_edit": [
+        "S07/sh07b @16.95s",
+        "S10/tile2 @17.3s"
+      ]
+    },
+    {
+      "id": "SRC10",
+      "source_start_s": 18.92,
+      "source_end_s": 21.52,
+      "visual_description": "Device held in hand, front view, hose attached on top, display blinking \"25.0\", tyre behind. Embossed manufacturer badge at the bottom.",
+      "product_function": "Tyre inflator / product hero",
+      "burned_in_captions": null,
+      "clean_rows": "0-768",
+      "quality": "high",
+      "usefulness": "Cleanest full-device front view.",
+      "suggested_destination": [
+        "S10",
+        "S13"
+      ],
+      "used_in_edit": [
+        "S10/sh10h @20s",
+        "S13/card still @20.3s"
+      ]
+    },
+    {
+      "id": "SRC11",
+      "source_start_s": 21.52,
+      "source_end_s": 22.72,
+      "visual_description": "Angled close-up of the display: \"25.0\", off, then \"0.00\" segmented ring lights at ~22.2.",
+      "product_function": "Product hero (display)",
+      "burned_in_captions": null,
+      "clean_rows": "0-768",
+      "quality": "high",
+      "usefulness": "Most premium-looking close-up; used for the reveal.",
+      "suggested_destination": [
+        "S04",
+        "S05",
+        "S12"
+      ],
+      "used_in_edit": [
+        "S04/sh04 @21.62s (freeze)",
+        "S05/sh05 @21.52s",
+        "S12/sh12b @22.02s (0.5x)"
+      ]
+    },
+    {
+      "id": "SRC12",
+      "source_start_s": 22.72,
+      "source_end_s": 28.2,
+      "visual_description": "Static: car wheel with the device standing on the ground next to it, hose connected.",
+      "product_function": "Convenience / in-car context",
+      "burned_in_captions": "\"Wireless Inflatable Auto Off\" over the lower half of the device",
+      "clean_rows": "0-615",
+      "quality": "medium",
+      "usefulness": "Only shot of the device next to the car; 5.5 s static and repetitive, so only ~2 s used.",
+      "suggested_destination": [
+        "S11"
+      ],
+      "used_in_edit": [
+        "S11/sh11 @23.2s"
+      ]
+    },
+    {
+      "id": "SRC13",
+      "source_start_s": 28.2,
+      "source_end_s": 29.04,
+      "visual_description": "Black title card \"Charger\".",
+      "product_function": "none",
+      "burned_in_captions": "title card",
+      "clean_rows": null,
+      "quality": "reject",
+      "usefulness": "Graphic card, no product.",
+      "suggested_destination": [],
+      "used_in_edit": []
+    },
+    {
+      "id": "SRC14",
+      "source_start_s": 29.04,
+      "source_end_s": 32.96,
+      "visual_description": "White tabletop: phone plugged into the device; phone charging ring appears at ~31.5.",
+      "product_function": "Power bank",
+      "burned_in_captions": null,
+      "clean_rows": "0-768",
+      "quality": "high",
+      "usefulness": "Only charging demonstration.",
+      "suggested_destination": [
+        "S08",
+        "S10"
+      ],
+      "used_in_edit": [
+        "S08/sh08 @30.7s",
+        "S10/tile3 @31.6s"
+      ]
+    },
+    {
+      "id": "SRC15",
+      "source_start_s": 32.96,
+      "source_end_s": 35,
+      "visual_description": "White tabletop: device with front white LED lit, finger on the button.",
+      "product_function": "Emergency light (white)",
+      "burned_in_captions": "\"LED Lights\" (faint grey)",
+      "clean_rows": "0-610",
+      "quality": "high",
+      "usefulness": "Light clearly visible.",
+      "suggested_destination": [
+        "S09",
+        "S10"
+      ],
+      "used_in_edit": [
+        "S09/sh09a @34.1s",
+        "S10/tile4 @33.3s"
+      ]
+    },
+    {
+      "id": "SRC16",
+      "source_start_s": 35,
+      "source_end_s": 36.8,
+      "visual_description": "Strobe mode: LED alternates colours.",
+      "product_function": "Emergency light (strobe)",
+      "burned_in_captions": "\"Strobe\"",
+      "clean_rows": "0-610",
+      "quality": "medium",
+      "usefulness": "Flickering; not needed.",
+      "suggested_destination": [],
+      "used_in_edit": []
+    },
+    {
+      "id": "SRC17",
+      "source_start_s": 36.8,
+      "source_end_s": 38.68,
+      "visual_description": "SOS mode: LED blinks red.",
+      "product_function": "Emergency light (SOS)",
+      "burned_in_captions": "\"SOS\"",
+      "clean_rows": "0-610",
+      "quality": "high",
+      "usefulness": "Reads as \"emergency\" instantly.",
+      "suggested_destination": [
+        "S09"
+      ],
+      "used_in_edit": [
+        "S09/sh09b @37s"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1308 @@
+{
+  "master": {
+    "file": "ElevenLabs_2026-10-21T22_27_52_CHAREF MARKETING_gen_sp100_s50_sb75_v4.mp3",
+    "duration_s": 28.760813,
+    "codec": "mp3, 44.1 kHz mono, 128 kb/s",
+    "speech_start_s": 0.09,
+    "speech_end_s": 28.52,
+    "note": "Original ElevenLabs file, used unmodified as one continuous track from frame 0."
+  },
+  "composition": {
+    "fps": 30,
+    "frames": 900,
+    "duration_s": 30,
+    "final_hold_s": 1.48
+  },
+  "method": [
+    "Phrase boundaries: ffmpeg silencedetect (noise=-40dB, d=0.12s) on the MP3; cross-checked at -35 dB (identical within 30 ms).",
+    "Word onsets: faster-whisper large-v3-turbo (word_timestamps, language=ar), refined to the nearest 10 ms RMS-envelope minimum where a clear dip exists.",
+    "Manual check: waveform plot with every word marker; all 18 phrases and their words line up with the energy envelope.",
+    "Frames = round(seconds x 30)."
+  ],
+  "segments": [
+    {
+      "id": "P01",
+      "phrase": "تخيل تفيق الصباح،",
+      "start_s": 0.09,
+      "end_s": 1.2,
+      "start_frame": 3,
+      "end_frame": 36,
+      "words": [
+        {
+          "word": "تخيل",
+          "start_s": 0.09,
+          "frame": 3
+        },
+        {
+          "word": "تفيق",
+          "start_s": 0.47,
+          "frame": 14
+        },
+        {
+          "word": "الصباح",
+          "start_s": 0.68,
+          "frame": 20
+        }
+      ],
+      "scene": "S01",
+      "planned_visual": "Open bonnet wide shot, cool low-key grade, slow push-in from frame 0.",
+      "planned_on_screen_text": [
+        "تخيّل",
+        "هاد الموقف",
+        "عندك خدمة ضرورية…"
+      ]
+    },
+    {
+      "id": "P02",
+      "phrase": "عندك خدمة ضرورية،",
+      "start_s": 1.42,
+      "end_s": 2.88,
+      "start_frame": 43,
+      "end_frame": 86,
+      "words": [
+        {
+          "word": "عندك",
+          "start_s": 1.42,
+          "frame": 43
+        },
+        {
+          "word": "خدمة",
+          "start_s": 1.72,
+          "frame": 52
+        },
+        {
+          "word": "ضرورية",
+          "start_s": 2.09,
+          "frame": 63
+        }
+      ],
+      "scene": "S01",
+      "planned_visual": "Open bonnet wide shot, cool low-key grade, slow push-in from frame 0.",
+      "planned_on_screen_text": [
+        "تخيّل",
+        "هاد الموقف",
+        "عندك خدمة ضرورية…"
+      ]
+    },
+    {
+      "id": "P03",
+      "phrase": "وتلقى الطوموبيل ما بغاتش تديماري.",
+      "start_s": 3.21,
+      "end_s": 5.08,
+      "start_frame": 96,
+      "end_frame": 152,
+      "words": [
+        {
+          "word": "وتلقى",
+          "start_s": 3.21,
+          "frame": 96
+        },
+        {
+          "word": "الطوموبيل",
+          "start_s": 3.61,
+          "frame": 108
+        },
+        {
+          "word": "ما",
+          "start_s": 3.95,
+          "frame": 119
+        },
+        {
+          "word": "بغاتش",
+          "start_s": 4.14,
+          "frame": 124
+        },
+        {
+          "word": "تديماري",
+          "start_s": 4.49,
+          "frame": 135
+        }
+      ],
+      "scene": "S02",
+      "planned_visual": "Finger presses the start button; freeze + desaturate on \"ما بغاتش\" (taken before the dashboard lights up in the source).",
+      "planned_on_screen_text": [
+        "وتلقى الطوموبيل",
+        "ما بغاتش تديماري!"
+      ]
+    },
+    {
+      "id": "P04",
+      "phrase": "خصوصاً إلا كانت البطارية قديمة،",
+      "start_s": 5.36,
+      "end_s": 7.36,
+      "start_frame": 161,
+      "end_frame": 221,
+      "words": [
+        {
+          "word": "خصوصاً",
+          "start_s": 5.36,
+          "frame": 161
+        },
+        {
+          "word": "إلا",
+          "start_s": 6,
+          "frame": 180
+        },
+        {
+          "word": "كانت",
+          "start_s": 6.18,
+          "frame": 185
+        },
+        {
+          "word": "البطارية",
+          "start_s": 6.41,
+          "frame": 192
+        },
+        {
+          "word": "قديمة",
+          "start_s": 6.96,
+          "frame": 209
+        }
+      ],
+      "scene": "S03",
+      "planned_visual": "Battery close-up (0.70x, continuous); grade drifts to an icy tone on \"وزاد عليها البرد\".",
+      "planned_on_screen_text": [
+        "خصوصاً إلا كانت",
+        "البطارية قديمة؟",
+        "وزاد عليها",
+        "البرد!"
+      ]
+    },
+    {
+      "id": "P05",
+      "phrase": "وزاد عليها البرد.",
+      "start_s": 7.68,
+      "end_s": 8.65,
+      "start_frame": 230,
+      "end_frame": 260,
+      "words": [
+        {
+          "word": "وزاد",
+          "start_s": 7.68,
+          "frame": 230
+        },
+        {
+          "word": "عليها",
+          "start_s": 8.03,
+          "frame": 241
+        },
+        {
+          "word": "البرد",
+          "start_s": 8.33,
+          "frame": 250
+        }
+      ],
+      "scene": "S03",
+      "planned_visual": "Battery close-up (0.70x, continuous); grade drifts to an icy tone on \"وزاد عليها البرد\".",
+      "planned_on_screen_text": [
+        "خصوصاً إلا كانت",
+        "البطارية قديمة؟",
+        "وزاد عليها",
+        "البرد!"
+      ]
+    },
+    {
+      "id": "P06",
+      "phrase": "علاش تبقى متقلق من هاد المواقف؟",
+      "start_s": 9,
+      "end_s": 10.83,
+      "start_frame": 270,
+      "end_frame": 325,
+      "words": [
+        {
+          "word": "علاش",
+          "start_s": 9,
+          "frame": 270
+        },
+        {
+          "word": "تبقى",
+          "start_s": 9.27,
+          "frame": 278
+        },
+        {
+          "word": "متقلق",
+          "start_s": 9.6,
+          "frame": 288
+        },
+        {
+          "word": "من",
+          "start_s": 9.95,
+          "frame": 299
+        },
+        {
+          "word": "هاد",
+          "start_s": 10.06,
+          "frame": 302
+        },
+        {
+          "word": "المواقف",
+          "start_s": 10.23,
+          "frame": 307
+        }
+      ],
+      "scene": "S04",
+      "planned_visual": "Type-led beat over a defocused, dark still of the product close-up — anticipation before the reveal.",
+      "planned_on_screen_text": [
+        "علاش",
+        "تبقى متقلق؟"
+      ]
+    },
+    {
+      "id": "P07",
+      "phrase": "مع هاد الجهاز،",
+      "start_s": 11.11,
+      "end_s": 12.03,
+      "start_frame": 333,
+      "end_frame": 361,
+      "words": [
+        {
+          "word": "مع",
+          "start_s": 11.11,
+          "frame": 333
+        },
+        {
+          "word": "هاد",
+          "start_s": 11.18,
+          "frame": 335
+        },
+        {
+          "word": "الجهاز",
+          "start_s": 11.49,
+          "frame": 345
+        }
+      ],
+      "scene": "S05",
+      "planned_visual": "Focus pull onto the real device close-up; ring highlight as the display lights.",
+      "planned_on_screen_text": [
+        "مع هاد الجهاز"
+      ]
+    },
+    {
+      "id": "P08",
+      "phrase": "عندك ديماغيور للبطارية،",
+      "start_s": 12.22,
+      "end_s": 13.78,
+      "start_frame": 367,
+      "end_frame": 413,
+      "words": [
+        {
+          "word": "عندك",
+          "start_s": 12.22,
+          "frame": 367
+        },
+        {
+          "word": "ديماغيور",
+          "start_s": 12.5,
+          "frame": 375
+        },
+        {
+          "word": "للبطارية",
+          "start_s": 13.02,
+          "frame": 391
+        }
+      ],
+      "scene": "S06",
+      "planned_visual": "Clamp lead plugged into the device, then red clamp onto the + terminal.",
+      "planned_on_screen_text": [
+        "ديمارور البطارية"
+      ]
+    },
+    {
+      "id": "P09",
+      "phrase": "وگونفلور للرويضات.",
+      "start_s": 13.99,
+      "end_s": 15.32,
+      "start_frame": 420,
+      "end_frame": 460,
+      "words": [
+        {
+          "word": "وگونفلور",
+          "start_s": 13.99,
+          "frame": 420
+        },
+        {
+          "word": "للرويضات",
+          "start_s": 14.63,
+          "frame": 439
+        }
+      ],
+      "scene": "S07",
+      "planned_visual": "Hose screwed onto the tyre valve, then the device in hand with the hose attached.",
+      "planned_on_screen_text": [
+        "گونفلور للرويضات"
+      ]
+    },
+    {
+      "id": "P10",
+      "phrase": "وزيد عليهم باور بانك،",
+      "start_s": 15.59,
+      "end_s": 16.88,
+      "start_frame": 468,
+      "end_frame": 506,
+      "words": [
+        {
+          "word": "وزيد",
+          "start_s": 15.59,
+          "frame": 468
+        },
+        {
+          "word": "عليهم",
+          "start_s": 15.85,
+          "frame": 476
+        },
+        {
+          "word": "باور",
+          "start_s": 16.27,
+          "frame": 488
+        },
+        {
+          "word": "بانك",
+          "start_s": 16.55,
+          "frame": 497
+        }
+      ],
+      "scene": "S08",
+      "planned_visual": "Phone plugged into the device; charging ring lights on \"باور\".",
+      "planned_on_screen_text": [
+        "POWER BANK"
+      ]
+    },
+    {
+      "id": "P11",
+      "phrase": "وحتى ضو ديال الطوارئ.",
+      "start_s": 17.09,
+      "end_s": 18.36,
+      "start_frame": 513,
+      "end_frame": 551,
+      "words": [
+        {
+          "word": "وحتى",
+          "start_s": 17.09,
+          "frame": 513
+        },
+        {
+          "word": "ضو",
+          "start_s": 17.4,
+          "frame": 522
+        },
+        {
+          "word": "ديال",
+          "start_s": 17.55,
+          "frame": 527
+        },
+        {
+          "word": "الطوارئ",
+          "start_s": 17.85,
+          "frame": 536
+        }
+      ],
+      "scene": "S09",
+      "planned_visual": "White LED lit, then red SOS mode on \"الطوارئ\".",
+      "planned_on_screen_text": [
+        "ضو الطوارئ"
+      ]
+    },
+    {
+      "id": "P12",
+      "phrase": "أربع خدمات",
+      "start_s": 18.62,
+      "end_s": 19.53,
+      "start_frame": 559,
+      "end_frame": 586,
+      "words": [
+        {
+          "word": "أربع",
+          "start_s": 18.62,
+          "frame": 559
+        },
+        {
+          "word": "خدمات",
+          "start_s": 18.85,
+          "frame": 566
+        }
+      ],
+      "scene": "S10",
+      "planned_visual": "2x2 grid of the four demos with a dominant \"4\", collapsing into the single-device hero.",
+      "planned_on_screen_text": [
+        "4",
+        "خدمات",
+        "فجِهاز",
+        "واحد"
+      ]
+    },
+    {
+      "id": "P13",
+      "phrase": "فجِهاز واحد!",
+      "start_s": 19.73,
+      "end_s": 20.65,
+      "start_frame": 592,
+      "end_frame": 620,
+      "words": [
+        {
+          "word": "فجِهاز",
+          "start_s": 19.73,
+          "frame": 592
+        },
+        {
+          "word": "واحد",
+          "start_s": 20.19,
+          "frame": 606
+        }
+      ],
+      "scene": "S10",
+      "planned_visual": "2x2 grid of the four demos with a dominant \"4\", collapsing into the single-device hero.",
+      "planned_on_screen_text": [
+        "4",
+        "خدمات",
+        "فجِهاز",
+        "واحد"
+      ]
+    },
+    {
+      "id": "P14",
+      "phrase": "تقدر تخليه ديما معاك فالطوموبيل.",
+      "start_s": 20.96,
+      "end_s": 22.85,
+      "start_frame": 629,
+      "end_frame": 686,
+      "words": [
+        {
+          "word": "تقدر",
+          "start_s": 20.96,
+          "frame": 629
+        },
+        {
+          "word": "تخليه",
+          "start_s": 21.24,
+          "frame": 637
+        },
+        {
+          "word": "ديما",
+          "start_s": 21.72,
+          "frame": 652
+        },
+        {
+          "word": "معاك",
+          "start_s": 22.03,
+          "frame": 661
+        },
+        {
+          "word": "فالطوموبيل",
+          "start_s": 22.3,
+          "frame": 669
+        }
+      ],
+      "scene": "S11",
+      "planned_visual": "Device standing next to the car wheel; slow push-in.",
+      "planned_on_screen_text": [
+        "تقدر تخليه",
+        "ديما معاك"
+      ]
+    },
+    {
+      "id": "P15",
+      "phrase": "الجهاز رجع للستوك،",
+      "start_s": 23.12,
+      "end_s": 24.35,
+      "start_frame": 694,
+      "end_frame": 731,
+      "words": [
+        {
+          "word": "الجهاز",
+          "start_s": 23.12,
+          "frame": 694
+        },
+        {
+          "word": "رجع",
+          "start_s": 23.58,
+          "frame": 707
+        },
+        {
+          "word": "للستوك",
+          "start_s": 23.92,
+          "frame": 718
+        }
+      ],
+      "scene": "S12",
+      "planned_visual": "Device with its clamp lead, then display close-up. No timers or counters.",
+      "planned_on_screen_text": [
+        "رجع للستوك",
+        "الكمية محدودة"
+      ]
+    },
+    {
+      "id": "P16",
+      "phrase": "والكمية محدودة.",
+      "start_s": 24.55,
+      "end_s": 25.59,
+      "start_frame": 737,
+      "end_frame": 768,
+      "words": [
+        {
+          "word": "والكمية",
+          "start_s": 24.55,
+          "frame": 737
+        },
+        {
+          "word": "محدودة",
+          "start_s": 25.12,
+          "frame": 754
+        }
+      ],
+      "scene": "S12",
+      "planned_visual": "Device with its clamp lead, then display close-up. No timers or counters.",
+      "planned_on_screen_text": [
+        "رجع للستوك",
+        "الكمية محدودة"
+      ]
+    },
+    {
+      "id": "P17",
+      "phrase": "طلبو دابا،",
+      "start_s": 25.9,
+      "end_s": 26.65,
+      "start_frame": 777,
+      "end_frame": 800,
+      "words": [
+        {
+          "word": "طلبو",
+          "start_s": 25.9,
+          "frame": 777
+        },
+        {
+          "word": "دابا",
+          "start_s": 26.26,
+          "frame": 788
+        }
+      ],
+      "scene": "S13",
+      "planned_visual": "Product card + MACHRI wordmark + CTA, held ~1.5 s after the last word.",
+      "planned_on_screen_text": [
+        "MACHRI",
+        "طلبو دابا",
+        "جرّب قبل ما تخلّص"
+      ]
+    },
+    {
+      "id": "P18",
+      "phrase": "وما تخلّص حتى تجرّبو.",
+      "start_s": 26.9,
+      "end_s": 28.52,
+      "start_frame": 807,
+      "end_frame": 856,
+      "words": [
+        {
+          "word": "وما",
+          "start_s": 26.9,
+          "frame": 807
+        },
+        {
+          "word": "تخلّص",
+          "start_s": 27.09,
+          "frame": 813
+        },
+        {
+          "word": "حتى",
+          "start_s": 27.74,
+          "frame": 832
+        },
+        {
+          "word": "تجرّبو",
+          "start_s": 27.93,
+          "frame": 838
+        }
+      ],
+      "scene": "S13",
+      "planned_visual": "Product card + MACHRI wordmark + CTA, held ~1.5 s after the last word.",
+      "planned_on_screen_text": [
+        "MACHRI",
+        "طلبو دابا",
+        "جرّب قبل ما تخلّص"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "The hook",
+      "emotional_phase": "Suspense",
+      "start_frame": 0,
+      "end_frame": 94,
+      "start_s": 0,
+      "end_s": 3.133,
+      "phrases": [
+        "P01",
+        "P02"
+      ],
+      "planned_visual": "Open bonnet wide shot, cool low-key grade, slow push-in from frame 0.",
+      "shots": [
+        {
+          "id": "sh01",
+          "source": "SRC05",
+          "frames": [
+            0,
+            94
+          ],
+          "source_in_s": 7.96,
+          "speed": "freeze",
+          "entrance": "none"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T01a",
+          "text": "تخيّل",
+          "locked_to": "تخيل @0.09",
+          "in_frame": -4,
+          "in_s": -0.133,
+          "out_frame": 86,
+          "animation_in": "MaskedReveal",
+          "animation_out": "mask out upward"
+        },
+        {
+          "id": "T01b",
+          "text": "هاد الموقف",
+          "locked_to": "تفيق @0.47",
+          "in_frame": 6,
+          "in_s": 0.2,
+          "out_frame": 86,
+          "animation_in": "MaskedReveal",
+          "animation_out": "mask out upward"
+        },
+        {
+          "id": "T01c",
+          "text": "عندك خدمة ضرورية…",
+          "locked_to": "عندك @1.42",
+          "in_frame": 40,
+          "in_s": 1.333,
+          "out_frame": 84,
+          "animation_in": "DirectionalSlide",
+          "animation_out": "fade + slide"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "name": "The problem",
+      "emotional_phase": "Concern",
+      "start_frame": 94,
+      "end_frame": 157,
+      "start_s": 3.133,
+      "end_s": 5.233,
+      "phrases": [
+        "P03"
+      ],
+      "planned_visual": "Finger presses the start button; freeze + desaturate on \"ما بغاتش\" (taken before the dashboard lights up in the source).",
+      "shots": [
+        {
+          "id": "sh02",
+          "source": "SRC05",
+          "frames": [
+            94,
+            118
+          ],
+          "source_in_s": 8.12,
+          "speed": 1,
+          "entrance": "cut"
+        },
+        {
+          "id": "sh02f",
+          "source": "SRC05",
+          "frames": [
+            118,
+            157
+          ],
+          "source_in_s": 8.933,
+          "speed": "freeze",
+          "entrance": "impact"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T02a",
+          "text": "وتلقى الطوموبيل",
+          "locked_to": "وتلقى @3.21",
+          "in_frame": 95,
+          "in_s": 3.167,
+          "out_frame": 150,
+          "animation_in": "DirectionalSlide",
+          "animation_out": "fade"
+        },
+        {
+          "id": "T02b",
+          "text": "ما بغاتش تديماري!",
+          "locked_to": "ما @3.95",
+          "in_frame": 116,
+          "in_s": 3.867,
+          "out_frame": 150,
+          "animation_in": "SoftScale",
+          "animation_out": "scale-down fade"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "name": "Old battery & cold",
+      "emotional_phase": "Concern",
+      "start_frame": 157,
+      "end_frame": 262,
+      "start_s": 5.233,
+      "end_s": 8.733,
+      "phrases": [
+        "P04",
+        "P05"
+      ],
+      "planned_visual": "Battery close-up (0.70x, continuous); grade drifts to an icy tone on \"وزاد عليها البرد\".",
+      "shots": [
+        {
+          "id": "sh03",
+          "source": "SRC04",
+          "frames": [
+            157,
+            262
+          ],
+          "source_in_s": 5.42,
+          "speed": 0.695,
+          "entrance": "push"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T03a",
+          "text": "خصوصاً إلا كانت",
+          "locked_to": "خصوصاً @5.36",
+          "in_frame": 159,
+          "in_s": 5.3,
+          "out_frame": 222,
+          "animation_in": "DirectionalSlide",
+          "animation_out": "fade"
+        },
+        {
+          "id": "T03b",
+          "text": "البطارية قديمة؟",
+          "locked_to": "البطارية @6.41",
+          "in_frame": 189,
+          "in_s": 6.3,
+          "out_frame": 222,
+          "animation_in": "KeywordEmphasis",
+          "animation_out": "mask out upward"
+        },
+        {
+          "id": "T03c",
+          "text": "وزاد عليها",
+          "locked_to": "وزاد @7.68",
+          "in_frame": 228,
+          "in_s": 7.6,
+          "out_frame": 262,
+          "animation_in": "DirectionalSlide",
+          "animation_out": "fade"
+        },
+        {
+          "id": "T03d",
+          "text": "البرد!",
+          "locked_to": "البرد @8.33",
+          "in_frame": 247,
+          "in_s": 8.233,
+          "out_frame": 262,
+          "animation_in": "KeywordEmphasis",
+          "animation_out": "blur out with the dissolve"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "name": "The emotional turn",
+      "emotional_phase": "Relief",
+      "start_frame": 262,
+      "end_frame": 331,
+      "start_s": 8.733,
+      "end_s": 11.033,
+      "phrases": [
+        "P06"
+      ],
+      "planned_visual": "Type-led beat over a defocused, dark still of the product close-up — anticipation before the reveal.",
+      "shots": [
+        {
+          "id": "sh04",
+          "source": "SRC11",
+          "frames": [
+            262,
+            331
+          ],
+          "source_in_s": 21.62,
+          "speed": "freeze",
+          "entrance": "dissolve"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T04a",
+          "text": "علاش",
+          "locked_to": "علاش @9.00",
+          "in_frame": 268,
+          "in_s": 8.933,
+          "out_frame": 322,
+          "animation_in": "MaskedReveal",
+          "animation_out": "mask out upward"
+        },
+        {
+          "id": "T04b",
+          "text": "تبقى متقلق؟",
+          "locked_to": "تبقى @9.27 / متقلق @9.60",
+          "in_frame": 278,
+          "in_s": 9.267,
+          "out_frame": 322,
+          "animation_in": "MaskedReveal",
+          "animation_out": "mask out upward"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "name": "Product reveal",
+      "emotional_phase": "Relief",
+      "start_frame": 331,
+      "end_frame": 365,
+      "start_s": 11.033,
+      "end_s": 12.167,
+      "phrases": [
+        "P07"
+      ],
+      "planned_visual": "Focus pull onto the real device close-up; ring highlight as the display lights.",
+      "shots": [
+        {
+          "id": "sh05",
+          "source": "SRC11",
+          "frames": [
+            331,
+            365
+          ],
+          "source_in_s": 21.52,
+          "speed": 1,
+          "entrance": "focusPull"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T05",
+          "text": "مع هاد الجهاز",
+          "locked_to": "مع @11.11",
+          "in_frame": 332,
+          "in_s": 11.067,
+          "out_frame": 360,
+          "animation_in": "DirectionalSlide",
+          "animation_out": "fade"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "name": "Battery booster",
+      "emotional_phase": "Discovery",
+      "start_frame": 365,
+      "end_frame": 418,
+      "start_s": 12.167,
+      "end_s": 13.933,
+      "phrases": [
+        "P08"
+      ],
+      "planned_visual": "Clamp lead plugged into the device, then red clamp onto the + terminal.",
+      "shots": [
+        {
+          "id": "sh06a",
+          "source": "SRC02",
+          "frames": [
+            365,
+            388
+          ],
+          "source_in_s": 1.12,
+          "speed": 1,
+          "entrance": "wipe"
+        },
+        {
+          "id": "sh06b",
+          "source": "SRC03",
+          "frames": [
+            388,
+            418
+          ],
+          "source_in_s": 3.72,
+          "speed": 1,
+          "entrance": "cut"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T06",
+          "text": "ديمارور البطارية",
+          "locked_to": "ديماغيور @12.50",
+          "in_frame": 372,
+          "in_s": 12.4,
+          "out_frame": 412,
+          "animation_in": "FeatureReveal",
+          "animation_out": "mask out upward"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "name": "Tyre inflator",
+      "emotional_phase": "Discovery",
+      "start_frame": 418,
+      "end_frame": 464,
+      "start_s": 13.933,
+      "end_s": 15.467,
+      "phrases": [
+        "P09"
+      ],
+      "planned_visual": "Hose screwed onto the tyre valve, then the device in hand with the hose attached.",
+      "shots": [
+        {
+          "id": "sh07a",
+          "source": "SRC08",
+          "frames": [
+            418,
+            438
+          ],
+          "source_in_s": 14.95,
+          "speed": 1,
+          "entrance": "cut"
+        },
+        {
+          "id": "sh07b",
+          "source": "SRC09",
+          "frames": [
+            438,
+            464
+          ],
+          "source_in_s": 16.95,
+          "speed": 1,
+          "entrance": "cut"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T07",
+          "text": "گونفلور للرويضات",
+          "locked_to": "وگونفلور @13.99",
+          "in_frame": 418,
+          "in_s": 13.933,
+          "out_frame": 458,
+          "animation_in": "FeatureReveal",
+          "animation_out": "mask out upward"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "name": "Power bank",
+      "emotional_phase": "Discovery",
+      "start_frame": 464,
+      "end_frame": 510,
+      "start_s": 15.467,
+      "end_s": 17,
+      "phrases": [
+        "P10"
+      ],
+      "planned_visual": "Phone plugged into the device; charging ring lights on \"باور\".",
+      "shots": [
+        {
+          "id": "sh08",
+          "source": "SRC14",
+          "frames": [
+            464,
+            510
+          ],
+          "source_in_s": 30.7,
+          "speed": 1,
+          "entrance": "blinds"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T08",
+          "text": "POWER BANK",
+          "locked_to": "باور @16.27",
+          "in_frame": 484,
+          "in_s": 16.133,
+          "out_frame": 504,
+          "animation_in": "FeatureReveal",
+          "animation_out": "mask out upward"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "name": "Emergency light",
+      "emotional_phase": "Discovery",
+      "start_frame": 510,
+      "end_frame": 556,
+      "start_s": 17,
+      "end_s": 18.533,
+      "phrases": [
+        "P11"
+      ],
+      "planned_visual": "White LED lit, then red SOS mode on \"الطوارئ\".",
+      "shots": [
+        {
+          "id": "sh09a",
+          "source": "SRC15",
+          "frames": [
+            510,
+            533
+          ],
+          "source_in_s": 34.1,
+          "speed": 1,
+          "entrance": "cut"
+        },
+        {
+          "id": "sh09b",
+          "source": "SRC17",
+          "frames": [
+            533,
+            556
+          ],
+          "source_in_s": 37,
+          "speed": 1,
+          "entrance": "cut"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T09",
+          "text": "ضو الطوارئ",
+          "locked_to": "ضو @17.40",
+          "in_frame": 519,
+          "in_s": 17.3,
+          "out_frame": 550,
+          "animation_in": "FeatureReveal",
+          "animation_out": "mask out upward"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "name": "4-in-1 payoff",
+      "emotional_phase": "Discovery",
+      "start_frame": 556,
+      "end_frame": 626,
+      "start_s": 18.533,
+      "end_s": 20.867,
+      "phrases": [
+        "P12",
+        "P13"
+      ],
+      "planned_visual": "2x2 grid of the four demos with a dominant \"4\", collapsing into the single-device hero.",
+      "shots": [
+        {
+          "id": "sh10h",
+          "source": "SRC10",
+          "frames": [
+            589,
+            626
+          ],
+          "source_in_s": 20,
+          "speed": 1,
+          "entrance": "zoomIn"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T10a",
+          "text": "4",
+          "locked_to": "أربع @18.62",
+          "in_frame": 556,
+          "in_s": 18.533,
+          "out_frame": 586,
+          "animation_in": "NumberReveal",
+          "animation_out": "slide up + fade"
+        },
+        {
+          "id": "T10b",
+          "text": "خدمات",
+          "locked_to": "خدمات @18.85",
+          "in_frame": 563,
+          "in_s": 18.767,
+          "out_frame": 586,
+          "animation_in": "MaskedReveal",
+          "animation_out": "slide up + fade"
+        },
+        {
+          "id": "T10c",
+          "text": "فجِهاز",
+          "locked_to": "فجِهاز @19.73",
+          "in_frame": 589,
+          "in_s": 19.633,
+          "out_frame": 620,
+          "animation_in": "MaskedReveal",
+          "animation_out": "mask out upward"
+        },
+        {
+          "id": "T10d",
+          "text": "واحد",
+          "locked_to": "واحد @20.19",
+          "in_frame": 603,
+          "in_s": 20.1,
+          "out_frame": 620,
+          "animation_in": "KeywordEmphasis",
+          "animation_out": "mask out upward"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "name": "Convenience",
+      "emotional_phase": "Confidence",
+      "start_frame": 626,
+      "end_frame": 689,
+      "start_s": 20.867,
+      "end_s": 22.967,
+      "phrases": [
+        "P14"
+      ],
+      "planned_visual": "Device standing next to the car wheel; slow push-in.",
+      "shots": [
+        {
+          "id": "sh11",
+          "source": "SRC12",
+          "frames": [
+            626,
+            689
+          ],
+          "source_in_s": 23.2,
+          "speed": 1,
+          "entrance": "cut"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T11a",
+          "text": "تقدر تخليه",
+          "locked_to": "تقدر @20.96",
+          "in_frame": 627,
+          "in_s": 20.9,
+          "out_frame": 682,
+          "animation_in": "DirectionalSlide",
+          "animation_out": "fade"
+        },
+        {
+          "id": "T11b",
+          "text": "ديما معاك",
+          "locked_to": "ديما @21.72",
+          "in_frame": 649,
+          "in_s": 21.633,
+          "out_frame": 682,
+          "animation_in": "SoftScale",
+          "animation_out": "scale-down fade"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "name": "Stock announcement",
+      "emotional_phase": "Urgency",
+      "start_frame": 689,
+      "end_frame": 773,
+      "start_s": 22.967,
+      "end_s": 25.767,
+      "phrases": [
+        "P15",
+        "P16"
+      ],
+      "planned_visual": "Device with its clamp lead, then display close-up. No timers or counters.",
+      "shots": [
+        {
+          "id": "sh12a",
+          "source": "SRC02",
+          "frames": [
+            689,
+            733
+          ],
+          "source_in_s": 1.75,
+          "speed": 1,
+          "entrance": "wipe"
+        },
+        {
+          "id": "sh12b",
+          "source": "SRC11",
+          "frames": [
+            733,
+            773
+          ],
+          "source_in_s": 22.02,
+          "speed": 0.5,
+          "entrance": "cut"
+        }
+      ],
+      "on_screen_text": [
+        {
+          "id": "T12a",
+          "text": "رجع للستوك",
+          "locked_to": "رجع @23.58",
+          "in_frame": 704,
+          "in_s": 23.467,
+          "out_frame": 766,
+          "animation_in": "MaskedReveal",
+          "animation_out": "mask out upward"
+        },
+        {
+          "id": "T12b",
+          "text": "الكمية محدودة",
+          "locked_to": "والكمية @24.55",
+          "in_frame": 734,
+          "in_s": 24.467,
+          "out_frame": 766,
+          "animation_in": "KeywordEmphasis",
+          "animation_out": "mask out upward"
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "name": "Call to action",
+      "emotional_phase": "Reassurance",
+      "start_frame": 773,
+      "end_frame": 900,
+      "start_s": 25.767,
+      "end_s": 30,
+      "phrases": [
+        "P17",
+        "P18"
+      ],
+      "planned_visual": "Product card + MACHRI wordmark + CTA, held ~1.5 s after the last word.",
+      "shots": [],
+      "on_screen_text": [
+        {
+          "id": "T13w",
+          "text": "MACHRI",
+          "locked_to": "scene start",
+          "in_frame": 776,
+          "in_s": 25.867,
+          "out_frame": null,
+          "animation_in": "MaskedReveal",
+          "animation_out": "holds to end"
+        },
+        {
+          "id": "T13a",
+          "text": "طلبو دابا",
+          "locked_to": "طلبو @25.90",
+          "in_frame": 775,
+          "in_s": 25.833,
+          "out_frame": null,
+          "animation_in": "CTAReveal",
+          "animation_out": "holds to end"
+        },
+        {
+          "id": "T13b",
+          "text": "جرّب قبل ما تخلّص",
+          "locked_to": "وما @26.90",
+          "in_frame": 805,
+          "in_s": 26.833,
+          "out_frame": null,
+          "animation_in": "DirectionalSlide",
+          "animation_out": "holds to end"
+        }
+      ]
+    }
+  ]
+}

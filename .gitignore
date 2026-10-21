@@ -1,0 +1,5 @@
+node_modules/
+out/
+.remotion/
+public/media/source_hq.mp4
+*.log

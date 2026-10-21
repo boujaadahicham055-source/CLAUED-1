@@ -1,0 +1,29 @@
+{
+  "name": "machri-ad",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MACHRI \u2014 9:16 performance video ad (Remotion)",
+  "scripts": {
+    "prepare-media": "bash scripts/prepare-media.sh",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts MachriAd deliverables/MACHRI_FINAL_AD.mp4 --codec=h264 --crf=16 --audio-codec=aac --audio-bitrate=192k --pixel-format=yuv420p",
+    "still": "remotion still src/index.ts MachriAd",
+    "typecheck": "tsc --noEmit",
+    "export-analysis": "esbuild scripts/export-analysis.ts --bundle --platform=node --format=esm --outfile=out/export-analysis.mjs --log-level=warning && node out/export-analysis.mjs",
+    "stills": "node scripts/render-stills.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.530",
+    "@remotion/fonts": "^4.0.530",
+    "@remotion/media-utils": "4.0.530",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.530"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "^4.0.530",
+    "@remotion/renderer": "^4.0.530",
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}
