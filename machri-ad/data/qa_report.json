@@ -1,0 +1,238 @@
+{
+  "file": "out/MACHRI_AD_FINAL.mp4",
+  "container": {
+    "videoCodec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": "30/1",
+    "pixFmt": "yuv420p",
+    "colorSpace": "bt709",
+    "colorRange": "tv",
+    "frames": 708,
+    "audioStreams": 1,
+    "audioCodec": "aac",
+    "durationSec": 23.616,
+    "sizeMB": 25.17,
+    "pass": true
+  },
+  "audio": {
+    "lagMs": 0.0,
+    "correlation": 0.99998,
+    "gain": 0.706,
+    "nonVoiceoverResidualDbBelowVO": 46.2,
+    "outputAudioSec": 23.616,
+    "voiceoverSec": 22.831,
+    "peakAfterVoiceoverEnd": 0.0,
+    "pass": true
+  },
+  "loudness": {
+    "integratedLUFS": -19.0,
+    "truePeakDBFS": -4.5
+  },
+  "blackFrames": [],
+  "frozenSegments": [],
+  "captionSync": [
+    {
+      "caption": "C01",
+      "text": "تخيّل",
+      "revealFrame": 4,
+      "word": "تخيّل",
+      "wordOnsetFrame": 6,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C02",
+      "text": "ما بغاتش",
+      "revealFrame": 71,
+      "word": "ما",
+      "wordOnsetFrame": 73,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C02",
+      "text": "تديماري!",
+      "revealFrame": 87,
+      "word": "تديماري",
+      "wordOnsetFrame": 89,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C03",
+      "text": "الرويضة",
+      "revealFrame": 126,
+      "word": "الرويضة",
+      "wordOnsetFrame": 128,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C03",
+      "text": "نقصات؟",
+      "revealFrame": 146,
+      "word": "نقصات",
+      "wordOnsetFrame": 148,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C04",
+      "text": "الحل",
+      "revealFrame": 186,
+      "word": "مع",
+      "wordOnsetFrame": 187,
+      "leadFrames": 1
+    },
+    {
+      "caption": "F01",
+      "text": "ديمارور البطارية",
+      "revealFrame": 226,
+      "word": "ديمارور",
+      "wordOnsetFrame": 228,
+      "leadFrames": 2
+    },
+    {
+      "caption": "F02",
+      "text": "02 / 04",
+      "revealFrame": 269,
+      "word": "وگونفلور",
+      "wordOnsetFrame": 272,
+      "leadFrames": 3
+    },
+    {
+      "caption": "F02",
+      "text": "گونفلور للرويضات",
+      "revealFrame": 270,
+      "word": "وگونفلور",
+      "wordOnsetFrame": 272,
+      "leadFrames": 2
+    },
+    {
+      "caption": "F03",
+      "text": "03 / 04",
+      "revealFrame": 318,
+      "word": "وزيد",
+      "wordOnsetFrame": 320,
+      "leadFrames": 2
+    },
+    {
+      "caption": "F03",
+      "text": "POWER BANK",
+      "revealFrame": 339,
+      "word": "باور بانك",
+      "wordOnsetFrame": 341,
+      "leadFrames": 2
+    },
+    {
+      "caption": "F04",
+      "text": "04 / 04",
+      "revealFrame": 363,
+      "word": "وضو",
+      "wordOnsetFrame": 364,
+      "leadFrames": 1
+    },
+    {
+      "caption": "F04",
+      "text": "ضو الطوارئ",
+      "revealFrame": 364,
+      "word": "وضو",
+      "wordOnsetFrame": 364,
+      "leadFrames": 0
+    },
+    {
+      "caption": "C05",
+      "text": "4",
+      "revealFrame": 402,
+      "word": "كل",
+      "wordOnsetFrame": 407,
+      "leadFrames": 5
+    },
+    {
+      "caption": "C05",
+      "text": "خدمات",
+      "revealFrame": 406,
+      "word": "كل",
+      "wordOnsetFrame": 407,
+      "leadFrames": 1
+    },
+    {
+      "caption": "C06",
+      "text": "فجِهاز",
+      "revealFrame": 424,
+      "word": "فجِهاز",
+      "wordOnsetFrame": 426,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C06",
+      "text": "واحد",
+      "revealFrame": 439,
+      "word": "واحد",
+      "wordOnsetFrame": 441,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C07",
+      "text": "ديما معاك",
+      "revealFrame": 481,
+      "word": "ديما",
+      "wordOnsetFrame": 483,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C07",
+      "text": "فالطوموبيل",
+      "revealFrame": 499,
+      "word": "فالطوموبيل",
+      "wordOnsetFrame": 501,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C08",
+      "text": "رجع",
+      "revealFrame": 537,
+      "word": "رجع",
+      "wordOnsetFrame": 539,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C08",
+      "text": "للستوك",
+      "revealFrame": 548,
+      "word": "للستوك",
+      "wordOnsetFrame": 550,
+      "leadFrames": 2
+    },
+    {
+      "caption": "C09",
+      "text": "الكمية",
+      "revealFrame": 568,
+      "word": "والكمية",
+      "wordOnsetFrame": 569,
+      "leadFrames": 1
+    },
+    {
+      "caption": "C09",
+      "text": "محدودة",
+      "revealFrame": 580,
+      "word": "محدودة",
+      "wordOnsetFrame": 582,
+      "leadFrames": 2
+    },
+    {
+      "caption": "CTA-primary",
+      "text": "طلبو دابا",
+      "revealFrame": 609,
+      "word": "طلبو",
+      "wordOnsetFrame": 611,
+      "leadFrames": 2
+    },
+    {
+      "caption": "CTA-secondary",
+      "text": "جرّب قبل ما تخلّص",
+      "revealFrame": 635,
+      "word": "وما",
+      "wordOnsetFrame": 637,
+      "leadFrames": 2
+    }
+  ],
+  "contactSheet": "MACHRI_QA_CONTACT_SHEET.png",
+  "pass": true
+}

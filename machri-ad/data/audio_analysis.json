@@ -1,0 +1,448 @@
+{
+ "source": "public/media/voiceover.mp3",
+ "durationSec": 22.831,
+ "durationFrames": 685,
+ "method": "10ms RMS envelope, speech >= -40.0 dBFS, pauses >= 120 ms; word onsets = Whisper(medium) starts snapped to local energy minima",
+ "phrases": [
+  {
+   "id": "P01",
+   "text": "تخيّل تكون فشي بلاصة",
+   "start": 0.19,
+   "end": 1.51,
+   "startFrame": 5,
+   "endFrame": 46,
+   "words": [
+    {
+     "asr": "تخيل",
+     "asrStart": 0.0,
+     "onset": 0.19,
+     "onsetFrame": 6
+    },
+    {
+     "asr": "تكون",
+     "asrStart": 0.54,
+     "onset": 0.59,
+     "onsetFrame": 18
+    },
+    {
+     "asr": "في",
+     "asrStart": 0.76,
+     "onset": 0.78,
+     "onsetFrame": 23
+    },
+    {
+     "asr": "شبلاسة",
+     "asrStart": 0.9,
+     "onset": 0.78,
+     "onsetFrame": 23
+    }
+   ]
+  },
+  {
+   "id": "P02",
+   "text": "وطوموبيلتك ما بغاتش تديماري",
+   "start": 1.82,
+   "end": 3.48,
+   "startFrame": 54,
+   "endFrame": 105,
+   "words": [
+    {
+     "asr": "وطموبيلتك",
+     "asrStart": 1.84,
+     "onset": 1.82,
+     "onsetFrame": 55
+    },
+    {
+     "asr": "ما",
+     "asrStart": 2.54,
+     "onset": 2.43,
+     "onsetFrame": 73
+    },
+    {
+     "asr": "بغاتش",
+     "asrStart": 2.66,
+     "onset": 2.62,
+     "onsetFrame": 79
+    },
+    {
+     "asr": "تدماري",
+     "asrStart": 3.04,
+     "onset": 2.98,
+     "onsetFrame": 89
+    }
+   ]
+  },
+  {
+   "id": "P03",
+   "text": "أو الرويضة نقصات فيها الريح",
+   "start": 4.09,
+   "end": 5.73,
+   "startFrame": 122,
+   "endFrame": 172,
+   "words": [
+    {
+     "asr": "أو",
+     "asrStart": 4.08,
+     "onset": 4.09,
+     "onsetFrame": 123
+    },
+    {
+     "asr": "الرويداء",
+     "asrStart": 4.26,
+     "onset": 4.27,
+     "onsetFrame": 128
+    },
+    {
+     "asr": "لقصات",
+     "asrStart": 4.84,
+     "onset": 4.94,
+     "onsetFrame": 148
+    },
+    {
+     "asr": "فيها",
+     "asrStart": 5.22,
+     "onset": 5.19,
+     "onsetFrame": 156
+    },
+    {
+     "asr": "الريح",
+     "asrStart": 5.48,
+     "onset": 5.59,
+     "onsetFrame": 168
+    }
+   ]
+  },
+  {
+   "id": "P04",
+   "text": "مع هاد الجهاز",
+   "start": 6.23,
+   "end": 7.12,
+   "startFrame": 186,
+   "endFrame": 214,
+   "words": [
+    {
+     "asr": "مع",
+     "asrStart": 6.2,
+     "onset": 6.23,
+     "onsetFrame": 187
+    },
+    {
+     "asr": "هاد",
+     "asrStart": 6.46,
+     "onset": 6.56,
+     "onsetFrame": 197
+    },
+    {
+     "asr": "الجهاز",
+     "asrStart": 6.68,
+     "onset": 6.7,
+     "onsetFrame": 201
+    }
+   ]
+  },
+  {
+   "id": "P05",
+   "text": "عندك ديمارور للبطارية",
+   "start": 7.31,
+   "end": 8.86,
+   "startFrame": 219,
+   "endFrame": 266,
+   "words": [
+    {
+     "asr": "عندك",
+     "asrStart": 7.32,
+     "onset": 7.31,
+     "onsetFrame": 219
+    },
+    {
+     "asr": "دماغير",
+     "asrStart": 7.72,
+     "onset": 7.61,
+     "onsetFrame": 228
+    },
+    {
+     "asr": "للبطارية",
+     "asrStart": 8.18,
+     "onset": 8.11,
+     "onsetFrame": 243
+    }
+   ]
+  },
+  {
+   "id": "P06",
+   "text": "وگونفلور للرويضات",
+   "start": 9.07,
+   "end": 10.22,
+   "startFrame": 272,
+   "endFrame": 307,
+   "words": [
+    {
+     "asr": "وقنفلور",
+     "asrStart": 8.98,
+     "onset": 9.07,
+     "onsetFrame": 272
+    },
+    {
+     "asr": "للرويدات",
+     "asrStart": 9.76,
+     "onset": 9.66,
+     "onsetFrame": 290
+    }
+   ]
+  },
+  {
+   "id": "P07",
+   "text": "وزيد عليهم باور بانك",
+   "start": 10.67,
+   "end": 11.97,
+   "startFrame": 320,
+   "endFrame": 360,
+   "words": [
+    {
+     "asr": "وزيد",
+     "asrStart": 10.56,
+     "onset": 10.67,
+     "onsetFrame": 320
+    },
+    {
+     "asr": "عليهم",
+     "asrStart": 11.04,
+     "onset": 10.95,
+     "onsetFrame": 328
+    },
+    {
+     "asr": "باوربانك",
+     "asrStart": 11.36,
+     "onset": 11.38,
+     "onsetFrame": 341
+    }
+   ]
+  },
+  {
+   "id": "P08",
+   "text": "وضو ديال الطوارئ",
+   "start": 12.15,
+   "end": 13.14,
+   "startFrame": 364,
+   "endFrame": 395,
+   "words": [
+    {
+     "asr": "وضو",
+     "asrStart": 12.2,
+     "onset": 12.15,
+     "onsetFrame": 364
+    },
+    {
+     "asr": "ديال",
+     "asrStart": 12.54,
+     "onset": 12.53,
+     "onsetFrame": 376
+    },
+    {
+     "asr": "الطوارئ",
+     "asrStart": 12.76,
+     "onset": 12.76,
+     "onsetFrame": 383
+    }
+   ]
+  },
+  {
+   "id": "P09",
+   "text": "كل هادشي فجِهاز واحد",
+   "start": 13.56,
+   "end": 15.1,
+   "startFrame": 406,
+   "endFrame": 453,
+   "words": [
+    {
+     "asr": "كل",
+     "asrStart": 13.5,
+     "onset": 13.56,
+     "onsetFrame": 407
+    },
+    {
+     "asr": "هاد",
+     "asrStart": 13.82,
+     "onset": 13.93,
+     "onsetFrame": 418
+    },
+    {
+     "asr": "شي",
+     "asrStart": 14.02,
+     "onset": 13.93,
+     "onsetFrame": 418
+    },
+    {
+     "asr": "في",
+     "asrStart": 14.2,
+     "onset": 14.21,
+     "onsetFrame": 426
+    },
+    {
+     "asr": "جهاز",
+     "asrStart": 14.32,
+     "onset": 14.21,
+     "onsetFrame": 426
+    },
+    {
+     "asr": "واحد",
+     "asrStart": 14.78,
+     "onset": 14.7,
+     "onsetFrame": 441
+    }
+   ]
+  },
+  {
+   "id": "P10",
+   "text": "تقدر تخليه ديما معاك فالطوموبيل",
+   "start": 15.4,
+   "end": 17.09,
+   "startFrame": 462,
+   "endFrame": 513,
+   "words": [
+    {
+     "asr": "تقدر",
+     "asrStart": 15.3,
+     "onset": 15.4,
+     "onsetFrame": 462
+    },
+    {
+     "asr": "تخليه",
+     "asrStart": 15.68,
+     "onset": 15.66,
+     "onsetFrame": 470
+    },
+    {
+     "asr": "ديما",
+     "asrStart": 16.12,
+     "onset": 16.09,
+     "onsetFrame": 483
+    },
+    {
+     "asr": "معك",
+     "asrStart": 16.4,
+     "onset": 16.39,
+     "onsetFrame": 492
+    },
+    {
+     "asr": "في",
+     "asrStart": 16.6,
+     "onset": 16.7,
+     "onsetFrame": 501
+    },
+    {
+     "asr": "طموبيل",
+     "asrStart": 16.68,
+     "onset": 16.7,
+     "onsetFrame": 501
+    }
+   ]
+  },
+  {
+   "id": "P11",
+   "text": "الجهاز رجع للستوك",
+   "start": 17.55,
+   "end": 18.71,
+   "startFrame": 526,
+   "endFrame": 562,
+   "words": [
+    {
+     "asr": "الجهاز",
+     "asrStart": 17.46,
+     "onset": 17.55,
+     "onsetFrame": 526
+    },
+    {
+     "asr": "رجع",
+     "asrStart": 18.02,
+     "onset": 17.96,
+     "onsetFrame": 539
+    },
+    {
+     "asr": "للستوك",
+     "asrStart": 18.26,
+     "onset": 18.35,
+     "onsetFrame": 550
+    }
+   ]
+  },
+  {
+   "id": "P12",
+   "text": "والكمية محدودة",
+   "start": 18.96,
+   "end": 20.02,
+   "startFrame": 568,
+   "endFrame": 601,
+   "words": [
+    {
+     "asr": "والكمية",
+     "asrStart": 18.96,
+     "onset": 18.96,
+     "onsetFrame": 569
+    },
+    {
+     "asr": "محدودة",
+     "asrStart": 19.52,
+     "onset": 19.4,
+     "onsetFrame": 582
+    }
+   ]
+  },
+  {
+   "id": "P13",
+   "text": "طلبو دابا",
+   "start": 20.36,
+   "end": 21.01,
+   "startFrame": 610,
+   "endFrame": 631,
+   "words": [
+    {
+     "asr": "طلبو",
+     "asrStart": 20.32,
+     "onset": 20.36,
+     "onsetFrame": 611
+    },
+    {
+     "asr": "دابا",
+     "asrStart": 20.7,
+     "onset": 20.66,
+     "onsetFrame": 620
+    }
+   ]
+  },
+  {
+   "id": "P14",
+   "text": "وما تخلّص حتى تجرّبو",
+   "start": 21.22,
+   "end": 22.56,
+   "startFrame": 636,
+   "endFrame": 677,
+   "words": [
+    {
+     "asr": "وما",
+     "asrStart": 21.2,
+     "onset": 21.22,
+     "onsetFrame": 637
+    },
+    {
+     "asr": "تخلص",
+     "asrStart": 21.44,
+     "onset": 21.42,
+     "onsetFrame": 643
+    },
+    {
+     "asr": "حتى",
+     "asrStart": 21.86,
+     "onset": 21.95,
+     "onsetFrame": 658
+    },
+    {
+     "asr": "تجربو",
+     "asrStart": 22.14,
+     "onset": 22.03,
+     "onsetFrame": 661
+    }
+   ]
+  }
+ ]
+}

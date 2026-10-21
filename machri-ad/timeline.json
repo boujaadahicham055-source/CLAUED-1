@@ -1,0 +1,936 @@
+{
+  "meta": {
+    "title": "MACHRI — 4-in-1 car emergency device (Moroccan Darija)",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 708,
+    "durationSec": 23.6,
+    "voiceover": {
+      "file": "media/voiceover.mp3",
+      "startFrame": 0,
+      "durationSec": 22.831,
+      "lastSpeechFrame": 677,
+      "note": "Master timeline. Played untouched from frame 0: no gain, no stretch, no edits."
+    },
+    "sourceFootage": {
+      "file": "media/source_footage.mp4",
+      "width": 576,
+      "height": 1024,
+      "fps": 30,
+      "frames": 385,
+      "durationSec": 12.833,
+      "audio": "discarded (derived clips are encoded without an audio track)"
+    },
+    "safeArea": {
+      "note": "Essential text kept inside y 300-1250 and x 90-990 (Meta Reels: ~14% top / ~35% bottom reserved for UI).",
+      "top": 300,
+      "bottom": 1250,
+      "left": 90,
+      "right": 990
+    },
+    "frameConvention": "All frame numbers are composition frames at 30 fps; source ranges are inclusive source frame indices."
+  },
+  "sourceShots": [
+    {
+      "id": "S1",
+      "frames": [
+        0,
+        53
+      ],
+      "content": "Hands holding the jump starter with red clamp in the engine bay",
+      "embeddedText": "Yellow 'Tyre Inflator & Jump Starter (Power Bank)' at x 89-487, y 671-862 (source px)"
+    },
+    {
+      "id": "S2",
+      "frames": [
+        54,
+        79
+      ],
+      "content": "Red clamp biting the battery terminal (close-up)",
+      "embeddedText": "Same yellow caption"
+    },
+    {
+      "id": "S3",
+      "frames": [
+        80,
+        110
+      ],
+      "content": "Hand attaching the black clamp to the battery",
+      "embeddedText": "Caption still visible on frames 80-84 only; frames 85+ are clean"
+    },
+    {
+      "id": "S4",
+      "frames": [
+        111,
+        130
+      ],
+      "content": "Driver's hand pressing the engine start button",
+      "embeddedText": null
+    },
+    {
+      "id": "S5",
+      "frames": [
+        131,
+        151
+      ],
+      "content": "Instrument cluster lighting up, warning lamps on, needle sweep",
+      "embeddedText": null
+    },
+    {
+      "id": "S6",
+      "frames": [
+        152,
+        201
+      ],
+      "content": "Hood open in a car park, water bottle on the engine (still for frames 152-163, then falls from vibration)",
+      "embeddedText": null
+    },
+    {
+      "id": "S7",
+      "frames": [
+        202,
+        244
+      ],
+      "content": "Inflator held at the tyre, hose on the valve, display lit, finger pressing controls",
+      "embeddedText": null
+    },
+    {
+      "id": "S8",
+      "frames": [
+        245,
+        318
+      ],
+      "content": "Wide shot of the front tyre with the device at its base",
+      "embeddedText": null
+    },
+    {
+      "id": "S9",
+      "frames": [
+        319,
+        384
+      ],
+      "content": "Device on the centre console charging a phone (charging indicator from frame 349); light button + LED lens visible",
+      "embeddedText": null
+    }
+  ],
+  "speech": [
+    {
+      "id": "P01",
+      "text": "تخيّل تكون فشي بلاصة",
+      "startFrame": 5,
+      "endFrame": 46,
+      "keys": {
+        "تخيّل": 6
+      }
+    },
+    {
+      "id": "P02",
+      "text": "وطوموبيلتك ما بغاتش تديماري",
+      "startFrame": 54,
+      "endFrame": 105,
+      "keys": {
+        "ما": 73,
+        "تديماري": 89
+      }
+    },
+    {
+      "id": "P03",
+      "text": "أو الرويضة نقصات فيها الريح",
+      "startFrame": 122,
+      "endFrame": 172,
+      "keys": {
+        "الرويضة": 128,
+        "نقصات": 148
+      }
+    },
+    {
+      "id": "P04",
+      "text": "مع هاد الجهاز",
+      "startFrame": 186,
+      "endFrame": 214,
+      "keys": {
+        "مع": 187,
+        "الجهاز": 201
+      }
+    },
+    {
+      "id": "P05",
+      "text": "عندك ديمارور للبطارية",
+      "startFrame": 219,
+      "endFrame": 266,
+      "keys": {
+        "ديمارور": 228,
+        "للبطارية": 243
+      }
+    },
+    {
+      "id": "P06",
+      "text": "وگونفلور للرويضات",
+      "startFrame": 272,
+      "endFrame": 307,
+      "keys": {
+        "وگونفلور": 272,
+        "للرويضات": 290
+      }
+    },
+    {
+      "id": "P07",
+      "text": "وزيد عليهم باور بانك",
+      "startFrame": 320,
+      "endFrame": 360,
+      "keys": {
+        "وزيد": 320,
+        "باور بانك": 341
+      }
+    },
+    {
+      "id": "P08",
+      "text": "وضو ديال الطوارئ",
+      "startFrame": 364,
+      "endFrame": 395,
+      "keys": {
+        "وضو": 364,
+        "الطوارئ": 383
+      }
+    },
+    {
+      "id": "P09",
+      "text": "كل هادشي فجِهاز واحد",
+      "startFrame": 406,
+      "endFrame": 453,
+      "keys": {
+        "كل": 407,
+        "فجِهاز": 426,
+        "واحد": 441
+      }
+    },
+    {
+      "id": "P10",
+      "text": "تقدر تخليه ديما معاك فالطوموبيل",
+      "startFrame": 462,
+      "endFrame": 513,
+      "keys": {
+        "ديما": 483,
+        "فالطوموبيل": 501
+      }
+    },
+    {
+      "id": "P11",
+      "text": "الجهاز رجع للستوك",
+      "startFrame": 526,
+      "endFrame": 562,
+      "keys": {
+        "رجع": 539,
+        "للستوك": 550
+      }
+    },
+    {
+      "id": "P12",
+      "text": "والكمية محدودة",
+      "startFrame": 568,
+      "endFrame": 601,
+      "keys": {
+        "والكمية": 569,
+        "محدودة": 582
+      }
+    },
+    {
+      "id": "P13",
+      "text": "طلبو دابا",
+      "startFrame": 610,
+      "endFrame": 631,
+      "keys": {
+        "طلبو": 611,
+        "دابا": 620
+      }
+    },
+    {
+      "id": "P14",
+      "text": "وما تخلّص حتى تجرّبو",
+      "startFrame": 636,
+      "endFrame": 677,
+      "keys": {
+        "وما": 637,
+        "حتى": 658
+      }
+    }
+  ],
+  "shots": [
+    {
+      "id": "sh01",
+      "from": 0,
+      "duration": 50,
+      "phrase": "P01",
+      "scene": "A Hook",
+      "source": {
+        "shot": "S4",
+        "start": 111,
+        "end": 130
+      },
+      "clipFrames": 50,
+      "look": "problem",
+      "push": {
+        "from": 1.0,
+        "to": 1.07,
+        "ox": 0.5,
+        "oy": 0.42
+      },
+      "enter": "cut",
+      "visual": "Driver reaches for the start button — interpolated slow motion (0.4x)"
+    },
+    {
+      "id": "sh02",
+      "from": 50,
+      "duration": 21,
+      "phrase": "P02",
+      "scene": "A Hook",
+      "source": {
+        "shot": "S5",
+        "start": 131,
+        "end": 145
+      },
+      "clipFrames": 21,
+      "look": "problem",
+      "push": {
+        "from": 1.06,
+        "to": 1.1,
+        "ox": 0.42,
+        "oy": 0.5
+      },
+      "enter": "cut",
+      "visual": "Dashboard: warning lamps on — cut lands in the breath before 'وطوموبيلتك'"
+    },
+    {
+      "id": "sh03",
+      "from": 71,
+      "duration": 48,
+      "phrase": "P02",
+      "scene": "A Hook",
+      "source": {
+        "shot": "S6",
+        "start": 152,
+        "end": 163
+      },
+      "clipFrames": 48,
+      "look": "problem",
+      "push": {
+        "from": 1.0,
+        "to": 1.08,
+        "ox": 0.5,
+        "oy": 0.5
+      },
+      "enter": "cut",
+      "visual": "Hood open in a car park; engine silent (bottle standing still). Cut 2 frames before 'ما بغاتش'"
+    },
+    {
+      "id": "sh04",
+      "from": 119,
+      "duration": 72,
+      "phrase": "P03",
+      "scene": "B Second problem",
+      "source": {
+        "shot": "S8",
+        "start": 245,
+        "end": 300
+      },
+      "clipFrames": 72,
+      "look": "problem",
+      "push": {
+        "from": 1.0,
+        "to": 1.06,
+        "ox": 0.5,
+        "oy": 0.32
+      },
+      "enter": "cut",
+      "visual": "The tyre. Extends 8 frames under the reveal wipe (183-191)"
+    },
+    {
+      "id": "sh05",
+      "from": 183,
+      "duration": 33,
+      "phrase": "P04",
+      "scene": "C Product reveal",
+      "source": {
+        "shot": "S7",
+        "start": 202,
+        "end": 218,
+        "crop": {
+          "x": 62,
+          "y": 280,
+          "w": 405,
+          "h": 720
+        }
+      },
+      "clipFrames": 33,
+      "look": "solution",
+      "push": {
+        "from": 1.1,
+        "to": 1.0,
+        "ox": 0.5,
+        "oy": 0.55
+      },
+      "enter": "wipe",
+      "visual": "Masked upward reveal onto the device face (display lit). Grade shifts from cold/desaturated to clean"
+    },
+    {
+      "id": "sh06",
+      "from": 216,
+      "duration": 26,
+      "phrase": "P05",
+      "scene": "D1 Jump starter",
+      "source": {
+        "shot": "S2",
+        "start": 54,
+        "end": 79
+      },
+      "clipFrames": 26,
+      "look": "solution",
+      "push": {
+        "from": 1.0,
+        "to": 1.05,
+        "ox": 0.5,
+        "oy": 0.35
+      },
+      "enter": "settle",
+      "maskEmbeddedText": true,
+      "visual": "Red clamp on the battery terminal; baked-in English caption hidden by a localized blur/dark treatment"
+    },
+    {
+      "id": "sh07",
+      "from": 242,
+      "duration": 27,
+      "phrase": "P05",
+      "scene": "D1 Jump starter",
+      "source": {
+        "shot": "S3",
+        "start": 85,
+        "end": 110
+      },
+      "clipFrames": 27,
+      "look": "solution",
+      "push": {
+        "from": 1.05,
+        "to": 1.0,
+        "ox": 0.55,
+        "oy": 0.45
+      },
+      "enter": "cut",
+      "visual": "Black clamp attached (clean frames only, caption-free)"
+    },
+    {
+      "id": "sh08",
+      "from": 269,
+      "duration": 49,
+      "phrase": "P06",
+      "scene": "D2 Inflator",
+      "source": {
+        "shot": "S7",
+        "start": 219,
+        "end": 244
+      },
+      "clipFrames": 49,
+      "look": "solution",
+      "push": {
+        "from": 1.0,
+        "to": 1.05,
+        "ox": 0.35,
+        "oy": 0.62
+      },
+      "enter": "settle",
+      "visual": "Inflator on the tyre valve, finger setting pressure"
+    },
+    {
+      "id": "sh09",
+      "from": 318,
+      "duration": 46,
+      "phrase": "P07",
+      "scene": "D3 Power bank",
+      "source": {
+        "shot": "S9",
+        "start": 325,
+        "end": 362
+      },
+      "clipFrames": 46,
+      "look": "solution",
+      "push": {
+        "from": 1.0,
+        "to": 1.05,
+        "ox": 0.62,
+        "oy": 0.4
+      },
+      "enter": "settle",
+      "visual": "Phone plugged into the device; charging indicator appears ~f346, on 'باور بانك' (f341)"
+    },
+    {
+      "id": "sh10",
+      "from": 364,
+      "duration": 37,
+      "phrase": "P08",
+      "scene": "D4 Emergency light",
+      "source": {
+        "shot": "S9",
+        "start": 362,
+        "end": 384,
+        "crop": {
+          "x": 140,
+          "y": 448,
+          "w": 324,
+          "h": 576
+        }
+      },
+      "clipFrames": 39,
+      "look": "solution",
+      "push": {
+        "from": 1.0,
+        "to": 1.07,
+        "ox": 0.72,
+        "oy": 0.62
+      },
+      "enter": "settle",
+      "visual": "Time-continuous cut-in on the device: light button (bulb icon) and LED lens. No light demo exists in the footage, so no glow is faked"
+    },
+    {
+      "id": "sh12",
+      "from": 401,
+      "duration": 121,
+      "phrase": "P09,P10",
+      "scene": "E Four-in-one / F Convenience",
+      "source": {
+        "shot": "S9",
+        "start": 330,
+        "end": 384
+      },
+      "clipFrames": 121,
+      "look": "solution",
+      "push": {
+        "from": 1.0,
+        "to": 1.08,
+        "ox": 0.55,
+        "oy": 0.7
+      },
+      "pushDelay": 31,
+      "enter": "cut",
+      "visual": "Plays inside the grid's power tile from f401; the tile expands to full frame on 'فجِهاز واحد' and hands over seamlessly at f432; held through P10 'keep it with you in the car'"
+    },
+    {
+      "id": "sh13",
+      "from": 522,
+      "duration": 84,
+      "phrase": "P11,P12",
+      "scene": "G Availability",
+      "source": {
+        "shot": "S9",
+        "start": 319,
+        "end": 384,
+        "crop": {
+          "x": 120,
+          "y": 313,
+          "w": 400,
+          "h": 711
+        }
+      },
+      "clipFrames": 84,
+      "look": "solution",
+      "push": {
+        "from": 1.04,
+        "to": 1.12,
+        "ox": 0.45,
+        "oy": 0.82
+      },
+      "enter": "cut",
+      "visual": "Cut-in from the console wide to the device itself (top view, buttons + LED lens). S1 was rejected: its baked-in caption covers the device body"
+    },
+    {
+      "id": "sh14",
+      "from": 606,
+      "duration": 102,
+      "phrase": "P13,P14",
+      "scene": "H CTA",
+      "source": {
+        "shot": "S7",
+        "start": 202,
+        "end": 244,
+        "crop": {
+          "x": 62,
+          "y": 280,
+          "w": 405,
+          "h": 720
+        }
+      },
+      "clipFrames": 102,
+      "look": "solution",
+      "push": {
+        "from": 1.1,
+        "to": 1.16,
+        "ox": 0.5,
+        "oy": 0.0
+      },
+      "enter": "settle",
+      "visual": "Hero device face (bookends the reveal), slow push; CTA stack above the product; 1 s hold after the last word"
+    }
+  ],
+  "grid": {
+    "from": 401,
+    "duration": 31,
+    "phrase": "P09",
+    "scene": "E Four-in-one",
+    "expandTile": "power",
+    "expandStart": 421,
+    "expandEnd": 432,
+    "tiles": [
+      {
+        "id": "battery",
+        "cell": "tr",
+        "index": "01",
+        "source": {
+          "shot": "S3",
+          "start": 85,
+          "end": 110
+        }
+      },
+      {
+        "id": "inflator",
+        "cell": "tl",
+        "index": "02",
+        "source": {
+          "shot": "S7",
+          "start": 214,
+          "end": 244
+        }
+      },
+      {
+        "id": "power",
+        "cell": "br",
+        "index": "03",
+        "shotClip": "sh12"
+      },
+      {
+        "id": "light",
+        "cell": "bl",
+        "index": "04",
+        "source": {
+          "shot": "S9",
+          "start": 354,
+          "end": 384,
+          "crop": {
+            "x": 140,
+            "y": 448,
+            "w": 324,
+            "h": 576
+          }
+        }
+      }
+    ],
+    "visual": "2x2 grid of the four real demonstrations (RTL order), '4 خدمات' centred; the power tile expands into sh12 on 'فجِهاز واحد'"
+  },
+  "captions": [
+    {
+      "id": "C01",
+      "phrase": "P01",
+      "kind": "headline",
+      "y": 560,
+      "out": 42,
+      "lines": [
+        {
+          "t": "*تخيّل*",
+          "size": "xl",
+          "at": 4,
+          "sync": "تخيّل"
+        },
+        {
+          "t": "هاد الموقف",
+          "size": "m",
+          "at": 12
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "phrase": "P02",
+      "kind": "headline",
+      "y": 1060,
+      "out": 110,
+      "lines": [
+        {
+          "t": "ما بغاتش",
+          "size": "m",
+          "at": 71,
+          "sync": "ما"
+        },
+        {
+          "t": "*تديماري!*",
+          "size": "xl",
+          "at": 87,
+          "sync": "تديماري"
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "phrase": "P03",
+      "kind": "headline",
+      "y": 440,
+      "out": 174,
+      "lines": [
+        {
+          "t": "الرويضة",
+          "size": "m",
+          "at": 126,
+          "sync": "الرويضة"
+        },
+        {
+          "t": "*نقصات؟*",
+          "size": "xl",
+          "at": 146,
+          "sync": "نقصات"
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "phrase": "P04",
+      "kind": "headline",
+      "y": 430,
+      "out": 208,
+      "lines": [
+        {
+          "t": "*الحل*",
+          "size": "xl",
+          "at": 186,
+          "sync": "مع"
+        },
+        {
+          "t": "معاك",
+          "size": "m",
+          "at": 196
+        }
+      ]
+    },
+    {
+      "id": "F01",
+      "phrase": "P05",
+      "kind": "feature",
+      "y": 1080,
+      "out": 260,
+      "lines": [
+        {
+          "t": "01 / 04",
+          "size": "xs",
+          "dir": "ltr",
+          "at": 217,
+          "accent": true
+        },
+        {
+          "t": "*ديمارور* البطارية",
+          "size": "l",
+          "at": 226,
+          "sync": "ديمارور"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "phrase": "P06",
+      "kind": "feature",
+      "y": 450,
+      "out": 309,
+      "lines": [
+        {
+          "t": "02 / 04",
+          "size": "xs",
+          "dir": "ltr",
+          "at": 269,
+          "accent": true,
+          "sync": "وگونفلور"
+        },
+        {
+          "t": "*گونفلور* للرويضات",
+          "size": "l",
+          "at": 270,
+          "sync": "وگونفلور"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "phrase": "P07",
+      "kind": "feature",
+      "y": 420,
+      "out": 355,
+      "lines": [
+        {
+          "t": "03 / 04",
+          "size": "xs",
+          "dir": "ltr",
+          "at": 318,
+          "accent": true,
+          "sync": "وزيد"
+        },
+        {
+          "t": "*POWER BANK*",
+          "size": "l",
+          "dir": "ltr",
+          "at": 339,
+          "sync": "باور بانك"
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "phrase": "P08",
+      "kind": "feature",
+      "y": 470,
+      "out": 393,
+      "lines": [
+        {
+          "t": "04 / 04",
+          "size": "xs",
+          "dir": "ltr",
+          "at": 363,
+          "accent": true,
+          "sync": "وضو"
+        },
+        {
+          "t": "*ضو* الطوارئ",
+          "size": "l",
+          "at": 364,
+          "sync": "وضو"
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "phrase": "P09",
+      "kind": "count",
+      "y": 940,
+      "out": 419,
+      "lines": [
+        {
+          "t": "*4*",
+          "size": "xxl",
+          "dir": "ltr",
+          "at": 402,
+          "sync": "كل"
+        },
+        {
+          "t": "خدمات",
+          "size": "l",
+          "at": 406,
+          "sync": "كل"
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "phrase": "P09",
+      "kind": "headline",
+      "y": 430,
+      "out": 452,
+      "lines": [
+        {
+          "t": "فجِهاز",
+          "size": "l",
+          "at": 424,
+          "sync": "فجِهاز"
+        },
+        {
+          "t": "*واحد*",
+          "size": "xl",
+          "at": 439,
+          "sync": "واحد"
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "phrase": "P10",
+      "kind": "headline",
+      "y": 430,
+      "out": 512,
+      "lines": [
+        {
+          "t": "*ديما معاك*",
+          "size": "l",
+          "at": 481,
+          "sync": "ديما"
+        },
+        {
+          "t": "فالطوموبيل",
+          "size": "m",
+          "at": 499,
+          "sync": "فالطوموبيل"
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "phrase": "P11",
+      "kind": "headline",
+      "y": 660,
+      "out": 560,
+      "lines": [
+        {
+          "t": "رجع",
+          "size": "m",
+          "at": 537,
+          "sync": "رجع"
+        },
+        {
+          "t": "*للستوك*",
+          "size": "xl",
+          "at": 548,
+          "sync": "للستوك"
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "phrase": "P12",
+      "kind": "headline",
+      "y": 660,
+      "out": 597,
+      "lines": [
+        {
+          "t": "الكمية",
+          "size": "m",
+          "at": 568,
+          "sync": "والكمية"
+        },
+        {
+          "t": "*محدودة*",
+          "size": "xl",
+          "at": 580,
+          "sync": "محدودة"
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "from": 606,
+    "phrase": "P13,P14",
+    "wordmark": {
+      "text": "MACHRI",
+      "at": 606,
+      "y": 330
+    },
+    "primary": {
+      "text": "طلبو دابا",
+      "at": 609,
+      "y": 470,
+      "sync": "طلبو"
+    },
+    "secondary": {
+      "text": "جرّب قبل ما تخلّص",
+      "at": 635,
+      "y": 620,
+      "sync": "وما"
+    }
+  },
+  "brandBug": {
+    "text": "MACHRI",
+    "in": 183,
+    "out": 600,
+    "y": 268
+  }
+}
