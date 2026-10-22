@@ -54,10 +54,11 @@ const WordMark: React.FC<{mark: Mark; frame: number}> = ({mark, frame}) => {
     <span
       style={{
         position: 'absolute',
-        right: `${MASK_PAD.side}em`,
-        left: `${MASK_PAD.side}em`,
-        bottom: isStrike ? undefined : '0.02em',
-        top: isStrike ? '58%' : undefined,
+        right: 0,
+        left: 0,
+        // below Arabic descenders (ح ق ي reach ~0.35em under the baseline)
+        bottom: isStrike ? undefined : '-0.17em',
+        top: isStrike ? '0.78em' : undefined,
         height: isStrike ? '0.075em' : '0.085em',
         borderRadius: '0.05em',
         background: mark.color,
@@ -96,6 +97,10 @@ export const KineticText: React.FC<KineticTextProps> = ({
     return null;
   }
   const exitMode = outVariant ?? (variant === 'MaskedReveal' ? 'mask' : 'fade');
+  // SoftScale scales the whole line as one unit (per-word scaling makes neighbours collide).
+  const firstIn = wordIn?.[0] ?? inAt;
+  const lineScale =
+    variant === 'SoftScale' ? 1.08 - 0.08 * ease(frame - firstIn, inDur) - 0.05 * ease(frame - outAt, outDur, EASE.in) : 1;
 
   return (
     <div
@@ -104,7 +109,7 @@ export const KineticText: React.FC<KineticTextProps> = ({
         top: y,
         left: x - WIDTH / 2,
         width: WIDTH,
-        transform: 'translateY(-50%)',
+        transform: `translateY(-50%) scale(${lineScale})`,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -140,13 +145,13 @@ export const KineticText: React.FC<KineticTextProps> = ({
         let inner: React.CSSProperties = {};
         let wrap: React.CSSProperties = {};
         if (variant === 'MaskedReveal') {
-          const yIn = (1 - pin) * 112;
-          const yOut = exitMode === 'mask' ? -pout * 112 : 0;
-          inner = {transform: `translateY(${fi < 0 ? 112 : yIn + yOut}%)`, opacity: exitMode === 'fade' ? 1 - pout : 1};
+          // 130% clears the mask including the underline that sits under the descenders
+          const yIn = (1 - pin) * 130;
+          const yOut = exitMode === 'mask' ? -pout * 130 : 0;
+          inner = {transform: `translateY(${fi < 0 ? 130 : yIn + yOut}%)`, opacity: exitMode === 'fade' ? 1 - pout : 1};
           wrap = {overflow: 'hidden', padding: `${MASK_PAD.top}em ${MASK_PAD.side}em ${MASK_PAD.bottom}em`, margin: `-${MASK_PAD.top}em -${MASK_PAD.side}em -${MASK_PAD.bottom}em`};
         } else if (variant === 'SoftScale') {
-          const s = 1.2 - 0.2 * pin - 0.06 * pout;
-          inner = {transform: `scale(${s})`, opacity: fi < 0 ? 0 : pin * (1 - pout), filter: `blur(${(1 - pin) * 10 + pout * 6}px)`};
+          inner = {opacity: fi < 0 ? 0 : pin * (1 - pout), filter: `blur(${(1 - pin) * 10 + pout * 6}px)`};
           wrap = {padding: `${MASK_PAD.top}em ${MASK_PAD.side}em ${MASK_PAD.bottom}em`, margin: `-${MASK_PAD.top}em -${MASK_PAD.side}em -${MASK_PAD.bottom}em`};
         } else {
           const sign = dir === 'rtl' ? 1 : -1;
@@ -157,12 +162,14 @@ export const KineticText: React.FC<KineticTextProps> = ({
 
         return (
           <span key={i} style={{position: 'relative', display: 'inline-block', ...wrap}}>
-            <span style={{display: 'inline-block', color: wColor, textShadow: shadow, ...inner}}>{w}</span>
-            {marks
-              .filter((m) => m.word === i && m.type !== 'glow')
-              .map((m, k) => (
-                <WordMark key={k} mark={m} frame={frame} />
-              ))}
+            <span style={{position: 'relative', display: 'inline-block', color: wColor, textShadow: shadow, ...inner}}>
+              {w}
+              {marks
+                .filter((m) => m.word === i && m.type !== 'glow')
+                .map((m, k) => (
+                  <WordMark key={k} mark={m} frame={frame} />
+                ))}
+            </span>
           </span>
         );
       })}

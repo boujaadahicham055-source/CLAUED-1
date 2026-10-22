@@ -22,6 +22,11 @@ const tailFor = (i: number) => {
   return own;
 };
 
+// The voice-over and SFX files are mono. Remotion's mixer upmixes mono as front-centre
+// (ffmpeg pans it to L/R at -3 dB); x sqrt(2) puts the original samples back in each
+// channel at unity, so the narration plays at exactly its delivered level.
+const MONO_TO_STEREO = Math.SQRT2;
+
 const SFX: {file: string; at: number; volume: number}[] = [
   {file: 'sfx/impact.wav', at: 116, volume: 0.14}, // "ما بغاتش تديماري!" freeze
   {file: 'sfx/swell.wav', at: 304, volume: 0.2}, // lead-in to the reveal
@@ -63,7 +68,7 @@ const Typography: React.FC = () => {
 
       {/* S02 problem */}
       <KineticText text={c('T02a').text} inAt={c('T02a').in} outAt={c('T02a').out} variant="DirectionalSlide" size={64} weight={700} color={COLORS.inkSoft} y={392} />
-      <KineticText text={c('T02b').text} inAt={c('T02b').in} outAt={c('T02b').out} variant="SoftScale" size={116} y={524} stagger={2} wordColors={{0: COLORS.danger, 1: COLORS.danger}} />
+      <KineticText text={c('T02b').text} inAt={c('T02b').in} outAt={c('T02b').out} variant="SoftScale" size={104} y={524} stagger={2} wordColors={{0: COLORS.danger, 1: COLORS.danger}} />
 
       {/* S03 old battery -> cold */}
       <KineticText text={c('T03a').text} inAt={c('T03a').in} outAt={c('T03a').out} variant="DirectionalSlide" size={64} weight={700} color={COLORS.inkSoft} y={392} />
@@ -160,10 +165,10 @@ export const MachriAd: React.FC = () => {
   return (
     <AbsoluteFill style={{backgroundColor: COLORS.bg}}>
       {/* Master narration: one continuous, untouched track from frame 0. */}
-      <Html5Audio src={staticFile(VO.file)} volume={1} />
+      <Html5Audio src={staticFile(VO.file)} volume={MONO_TO_STEREO} allowAmplificationDuringRender />
       {SFX.map((s, i) => (
         <Sequence key={i} from={s.at} durationInFrames={45} layout="none" name={`sfx ${s.file}@${s.at}`}>
-          <Html5Audio src={staticFile(s.file)} volume={s.volume} />
+          <Html5Audio src={staticFile(s.file)} volume={s.volume * MONO_TO_STEREO} allowAmplificationDuringRender />
         </Sequence>
       ))}
 

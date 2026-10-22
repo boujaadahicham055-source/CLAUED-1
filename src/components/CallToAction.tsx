@@ -28,6 +28,7 @@ export const Wordmark: React.FC<{size: number; inAt: number; y: number; opacity?
             letterSpacing: '0.34em',
             marginRight: '-0.34em',
             color: COLORS.ink,
+            textShadow: '0 2px 14px rgba(0,0,0,0.55)',
           }}
         >
           MACHRI
@@ -38,7 +39,8 @@ export const Wordmark: React.FC<{size: number; inAt: number; y: number; opacity?
   );
 };
 
-const CARD = {w: 720, h: 690, top: 392};
+// Everything critical stays above y≈1240 (Reels caption/CTA overlay covers the bottom ~35%).
+const CARD = {w: 720, h: 660, top: 398};
 
 /** Closing card: real product + MACHRI + primary CTA + try-before-you-pay line. Local frame 0 = comp 773. */
 export const CallToAction: React.FC<{ctaIn: number; trustIn: number; wordmarkIn: number}> = ({ctaIn, trustIn, wordmarkIn}) => {
@@ -52,7 +54,7 @@ export const CallToAction: React.FC<{ctaIn: number; trustIn: number; wordmarkIn:
     <AbsoluteFill>
       <AbsoluteFill style={{opacity: bgIn, backgroundColor: COLORS.bg}}>
         <BlurredBackdrop time={CTA_PRODUCT.src} cleanBottom={src.cleanBottom} filter={gradeFilter(GRADES.natural)} dim={0.28} />
-        <AbsoluteFill style={{background: `radial-gradient(55% 32% at 50% 40%, ${COLORS.accent}30 0%, rgba(0,0,0,0) 72%)`}} />
+        <AbsoluteFill style={{background: `radial-gradient(60% 36% at 50% 50%, ${COLORS.accent}30 0%, rgba(0,0,0,0) 72%)`}} />
         <AbsoluteFill style={{background: 'linear-gradient(to bottom, rgba(8,9,11,0.55) 0%, rgba(8,9,11,0.15) 40%, rgba(8,9,11,0.85) 100%)'}} />
       </AbsoluteFill>
 
@@ -85,9 +87,9 @@ export const CallToAction: React.FC<{ctaIn: number; trustIn: number; wordmarkIn:
         <div style={{position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.45) 100%)'}} />
       </div>
 
-      <Wordmark size={52} inAt={wordmarkIn} y={316} />
-      <CTAReveal text="طلبو دابا" inAt={ctaIn} y={1084} width={620} height={136} fontSize={74} sweepAt={ctaIn + 52} />
-      <TrustLine inAt={trustIn} y={1218} />
+      <Wordmark size={52} inAt={wordmarkIn} y={326} />
+      <CTAReveal text="طلبو دابا" inAt={ctaIn} y={1062} width={620} height={136} fontSize={74} sweepAt={ctaIn + 52} />
+      <TrustLine inAt={trustIn} y={1188} />
     </AbsoluteFill>
   );
 };

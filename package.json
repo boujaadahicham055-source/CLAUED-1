@@ -6,7 +6,7 @@
   "scripts": {
     "prepare-media": "bash scripts/prepare-media.sh",
     "studio": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts MachriAd deliverables/MACHRI_FINAL_AD.mp4 --codec=h264 --crf=16 --audio-codec=aac --audio-bitrate=192k --pixel-format=yuv420p",
+    "render": "bash scripts/render-final.sh",
     "still": "remotion still src/index.ts MachriAd",
     "typecheck": "tsc --noEmit",
     "export-analysis": "esbuild scripts/export-analysis.ts --bundle --platform=node --format=esm --outfile=out/export-analysis.mjs --log-level=warning && node out/export-analysis.mjs",

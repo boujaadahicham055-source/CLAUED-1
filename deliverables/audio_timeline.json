@@ -45,7 +45,7 @@
         }
       ],
       "scene": "S01",
-      "planned_visual": "Open bonnet wide shot, cool low-key grade, slow push-in from frame 0.",
+      "planned_visual": "Dark car interior on the start/stop button (held frame before the hand enters), cool low-key grade, slow push-in from frame 0.",
       "planned_on_screen_text": [
         "تخيّل",
         "هاد الموقف",
@@ -77,7 +77,7 @@
         }
       ],
       "scene": "S01",
-      "planned_visual": "Open bonnet wide shot, cool low-key grade, slow push-in from frame 0.",
+      "planned_visual": "Dark car interior on the start/stop button (held frame before the hand enters), cool low-key grade, slow push-in from frame 0.",
       "planned_on_screen_text": [
         "تخيّل",
         "هاد الموقف",
@@ -634,7 +634,7 @@
         "P01",
         "P02"
       ],
-      "planned_visual": "Open bonnet wide shot, cool low-key grade, slow push-in from frame 0.",
+      "planned_visual": "Dark car interior on the start/stop button (held frame before the hand enters), cool low-key grade, slow push-in from frame 0.",
       "shots": [
         {
           "id": "sh01",
@@ -724,7 +724,7 @@
           "locked_to": "وتلقى @3.21",
           "in_frame": 95,
           "in_s": 3.167,
-          "out_frame": 150,
+          "out_frame": 147,
           "animation_in": "DirectionalSlide",
           "animation_out": "fade"
         },
@@ -734,7 +734,7 @@
           "locked_to": "ما @3.95",
           "in_frame": 116,
           "in_s": 3.867,
-          "out_frame": 150,
+          "out_frame": 147,
           "animation_in": "SoftScale",
           "animation_out": "scale-down fade"
         }
@@ -773,7 +773,7 @@
           "locked_to": "خصوصاً @5.36",
           "in_frame": 159,
           "in_s": 5.3,
-          "out_frame": 222,
+          "out_frame": 220,
           "animation_in": "DirectionalSlide",
           "animation_out": "fade"
         },
@@ -783,7 +783,7 @@
           "locked_to": "البطارية @6.41",
           "in_frame": 189,
           "in_s": 6.3,
-          "out_frame": 222,
+          "out_frame": 220,
           "animation_in": "KeywordEmphasis",
           "animation_out": "mask out upward"
         },
@@ -793,7 +793,7 @@
           "locked_to": "وزاد @7.68",
           "in_frame": 228,
           "in_s": 7.6,
-          "out_frame": 262,
+          "out_frame": 256,
           "animation_in": "DirectionalSlide",
           "animation_out": "fade"
         },
@@ -803,7 +803,7 @@
           "locked_to": "البرد @8.33",
           "in_frame": 247,
           "in_s": 8.233,
-          "out_frame": 262,
+          "out_frame": 256,
           "animation_in": "KeywordEmphasis",
           "animation_out": "blur out with the dissolve"
         }
@@ -889,7 +889,7 @@
           "locked_to": "مع @11.11",
           "in_frame": 332,
           "in_s": 11.067,
-          "out_frame": 360,
+          "out_frame": 356,
           "animation_in": "DirectionalSlide",
           "animation_out": "fade"
         }
@@ -938,7 +938,7 @@
           "locked_to": "ديماغيور @12.50",
           "in_frame": 372,
           "in_s": 12.4,
-          "out_frame": 412,
+          "out_frame": 409,
           "animation_in": "FeatureReveal",
           "animation_out": "mask out upward"
         }
@@ -987,7 +987,7 @@
           "locked_to": "وگونفلور @13.99",
           "in_frame": 418,
           "in_s": 13.933,
-          "out_frame": 458,
+          "out_frame": 455,
           "animation_in": "FeatureReveal",
           "animation_out": "mask out upward"
         }
@@ -1025,7 +1025,7 @@
           "locked_to": "باور @16.27",
           "in_frame": 484,
           "in_s": 16.133,
-          "out_frame": 504,
+          "out_frame": 501,
           "animation_in": "FeatureReveal",
           "animation_out": "mask out upward"
         }
@@ -1074,7 +1074,7 @@
           "locked_to": "ضو @17.40",
           "in_frame": 519,
           "in_s": 17.3,
-          "out_frame": 550,
+          "out_frame": 546,
           "animation_in": "FeatureReveal",
           "animation_out": "mask out upward"
         }
@@ -1111,9 +1111,9 @@
           "id": "T10a",
           "text": "4",
           "locked_to": "أربع @18.62",
-          "in_frame": 556,
-          "in_s": 18.533,
-          "out_frame": 586,
+          "in_frame": 557,
+          "in_s": 18.567,
+          "out_frame": 582,
           "animation_in": "NumberReveal",
           "animation_out": "slide up + fade"
         },
@@ -1123,7 +1123,7 @@
           "locked_to": "خدمات @18.85",
           "in_frame": 563,
           "in_s": 18.767,
-          "out_frame": 586,
+          "out_frame": 582,
           "animation_in": "MaskedReveal",
           "animation_out": "slide up + fade"
         },
@@ -1131,9 +1131,9 @@
           "id": "T10c",
           "text": "فجِهاز",
           "locked_to": "فجِهاز @19.73",
-          "in_frame": 589,
-          "in_s": 19.633,
-          "out_frame": 620,
+          "in_frame": 590,
+          "in_s": 19.667,
+          "out_frame": 617,
           "animation_in": "MaskedReveal",
           "animation_out": "mask out upward"
         },
@@ -1143,7 +1143,7 @@
           "locked_to": "واحد @20.19",
           "in_frame": 603,
           "in_s": 20.1,
-          "out_frame": 620,
+          "out_frame": 617,
           "animation_in": "KeywordEmphasis",
           "animation_out": "mask out upward"
         }
@@ -1181,7 +1181,7 @@
           "locked_to": "تقدر @20.96",
           "in_frame": 627,
           "in_s": 20.9,
-          "out_frame": 682,
+          "out_frame": 679,
           "animation_in": "DirectionalSlide",
           "animation_out": "fade"
         },
@@ -1191,7 +1191,7 @@
           "locked_to": "ديما @21.72",
           "in_frame": 649,
           "in_s": 21.633,
-          "out_frame": 682,
+          "out_frame": 679,
           "animation_in": "SoftScale",
           "animation_out": "scale-down fade"
         }
@@ -1241,7 +1241,7 @@
           "locked_to": "رجع @23.58",
           "in_frame": 704,
           "in_s": 23.467,
-          "out_frame": 766,
+          "out_frame": 764,
           "animation_in": "MaskedReveal",
           "animation_out": "mask out upward"
         },
@@ -1251,7 +1251,7 @@
           "locked_to": "والكمية @24.55",
           "in_frame": 734,
           "in_s": 24.467,
-          "out_frame": 766,
+          "out_frame": 764,
           "animation_in": "KeywordEmphasis",
           "animation_out": "mask out upward"
         }

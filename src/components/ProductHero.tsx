@@ -52,7 +52,7 @@ const GRID_CY = GRID_TOP + TILE_H + GAP / 2;
  */
 export const FourInOneGrid: React.FC<{collapseAt: number}> = ({collapseAt}) => {
   const f = useCurrentFrame();
-  const bgIn = ease(f, 5);
+  const bgIn = ease(f, 3);
   const collapse = ease(f - collapseAt, 10, EASE.in);
   const bgOpacity = bgIn * (1 - ease(f - collapseAt - 2, 8, EASE.inOut));
 
@@ -92,10 +92,11 @@ export const FourInOneGrid: React.FC<{collapseAt: number}> = ({collapseAt}) => {
             }}
           >
             <Footage time={time} focus={t.focus} scale={t.scale} centerX={TILE_W / 2} centerY={TILE_H / 2} cleanBottom={src.cleanBottom} fitWidth={TILE_W} feather={{top: 0, bottom: 0}} filter={gradeFilter(GRADES.natural)} />
-            <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 120, background: 'linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0))'}} />
+            {/* labels on top of each tile so the bottom row stays clear of the Reels caption overlay */}
+            <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 120, background: 'linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0))'}} />
             <div
               lang="ar"
-              style={{position: 'absolute', right: 22, bottom: 14, direction: 'rtl', fontFamily: FONT, fontWeight: 800, fontSize: 38, lineHeight: 1.4, color: '#fff', display: 'flex', alignItems: 'center', gap: 12}}
+              style={{position: 'absolute', right: 22, top: 12, direction: 'rtl', fontFamily: FONT, fontWeight: 800, fontSize: 38, lineHeight: 1.4, color: '#fff', display: 'flex', alignItems: 'center', gap: 12}}
             >
               <span style={{width: 12, height: 12, borderRadius: 6, background: COLORS.accent, boxShadow: `0 0 12px ${COLORS.accent}`}} />
               {t.label}
