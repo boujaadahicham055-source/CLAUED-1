@@ -111,7 +111,12 @@ export function Deck({ animate = true }: { animate?: boolean }) {
   /* URL hash <-> slide ----------------------------------------------------- */
   useEffect(() => {
     const h = `#/${nav.index + 1}`;
-    if (window.location.hash !== h) window.history.replaceState(null, "", h);
+    if (window.location.hash === h) return;
+    try {
+      window.history.replaceState(null, "", h);
+    } catch {
+      // Sandboxed hosts may refuse history access; the deck works without a URL hash.
+    }
   }, [nav.index]);
   useEffect(() => {
     const on = () => go(indexFromHash());
