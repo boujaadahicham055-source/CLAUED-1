@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  /* Arabic must never be tracked. Latin-only elements opt in explicitly. */
+  letter-spacing: normal;
+  word-spacing: normal;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+}
+
+body {
+  background: var(--charcoal);
+  color: var(--ivory);
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  letter-spacing: normal;
+}
+
+/* Bidi helpers --------------------------------------------------- */
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.latin-caps {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.22em; /* Latin acronym only */
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.num {
+  font-variant-numeric: lining-nums tabular-nums;
+  unicode-bidi: isolate;
+}
+
+/* Viewport / stage ----------------------------------------------- */
+.viewport {
+  position: fixed;
+  inset: 0;
+  background: var(--charcoal);
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.stage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--stage-w);
+  height: var(--stage-h);
+  transform-origin: 0 0;
+  overflow: hidden;
+  background: var(--charcoal);
+  contain: layout paint;
+}
+
+.slide-layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform, opacity;
+}
+
+.chapter-sweep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  will-change: transform, opacity;
+  width: 2px;
+  background: var(--gold);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.progress {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gold-60);
+  z-index: 6;
+  transition: width 700ms var(--ease);
+}
+
+/* Print / static export ----------------------------------------- */
+@page {
+  size: 1920px 1080px;
+  margin: 0;
+}
+
+body.print-mode {
+  overflow: visible;
+  background: var(--charcoal);
+}
+
+.print-sheet {
+  position: relative;
+  width: var(--stage-w);
+  height: var(--stage-h);
+  overflow: hidden;
+  break-after: page;
+  page-break-after: always;
+}
+
+.print-sheet:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+@media print {
+  html,
+  body {
+    background: var(--charcoal);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
